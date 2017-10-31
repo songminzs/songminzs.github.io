@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站-产品详情</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<!--导航-->
+	<div class="head">
+    	<div class="msg">
+        	<div class="phone">咨询热线：<span>400-0910-888</span></div>
+            <div class="login"><a href="">登录</a><span>|</span><a href="">注册</a></div>
+        </div>
+        <div class="logo-nav">
+        	<div class="logo">
+            	<img src="../images/index/header_02.png">
+            </div>
+            <div class="nav">
+            	<script type="text/javascript">
+					$(function(){
+						$(".nav ul > li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find("ul").slideDown(600);
+							},
+							function(){
+								$(this).find("span").animate({left:"-116px"});
+								$(this).find("ul").slideUp(600);
+							}
+						)
+					})
+				</script>
+            	<ul>
+                	<li><a href="">网站首页<span></span></a></li>
+                    <li><a href="">关于我们<span></span></a>
+                    	<ul>
+                        	<li><a href="">荣誉资质</a></li>
+                            <li><a href="">企业文化</a></li>
+                            <li><a href="">企业实力</a></li>
+                            <li><a href="">大事记</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">产品服务<span></span></a>
+                    	<ul>
+                        	<li><a href="">职业装</a></li>
+                            <li><a href="">羽绒服</a></li>
+                            <li><a href="">毛呢外套</a></li>
+                            <li><a href="">针织毛衣</a></li>
+                            <li><a href="">风衣</a></li>
+                            <li><a href="">卫衣</a></li>
+                            <li><a href="">T恤</a></li>
+                            <li><a href="">连衣裙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">制衣流程<span></span></a></li>
+                    <li><a href="">新闻资讯<span></span></a>
+                    	<ul>
+                        	<li><a href="">公司新闻</a></li>
+                            <li><a href="">订单动态</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">服务中心<span></span></a>
+                    	<ul>
+                        	<li><a href="">在线订单</a></li>
+                            <li><a href="">营销网络</a></li>
+                            <li><a href="">在线留言</a></li>
+                            <li><a href="">留言列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">合作伙伴<span></span></a></li>
+                    <li><a href="">联系我们<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图滚动-->
+    <div class="slide">
+    	<div class="search-box">
+        	<div class="search-boxwrap">
+                <div class="order-search">
+                    <p>订单查询</p>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="text" placeholder="请输入订单号">
+                            <input type="submit" class="search-detail" value="搜索">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-form input[type=text]").focus(
+                            function(){
+                                $(".order-about").slideDown();
+                                $(this).animate({height:"90px"}).addClass("inputfocus");
+                                $(".search-form .search-detail").addClass("btnfocus");
+                            }
+                        );
+                        $(".search-boxwrap").mouseenter(function(){
+                            
+                        }).mouseleave(function(){
+                            $(".order-about").slideUp();
+                            $(".search-form input[type=text]").animate({height:"30px"}).removeClass("inputfocus").blur();
+                            $(".search-form .search-detail").removeClass("btnfocus");
+                        });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-detail").click(function(){
+                            if($(".search-form input[type=text]").val() == ""){
+                                return false;
+                            }
+                        });
+                    })
+                </script>
+                <div class="order-about">
+                    <div class="line-order">
+                        <a href=""><em>新</em>在线下单<span>急速下单，无需等待!</span></a>
+                    </div>
+                    <div class="custom">
+                        <p>客服热线<span>400-0910-888</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-slide">
+        	<script type="text/javascript">
+			$(function(){
+				var isPagerClick=false,		//判断底下的小按钮
+					isPrevClick=false,		//判断左右滑动的按钮
+					index=0,	//目标值
+					pre=0,
+					handid;
+				start();
+				function start(){
+					init();	//初始化函数
+					$(".car-img li").eq(0).fadeIn().siblings().fadeOut();
+					handid = setInterval(play,2000);	//轮播
+				}
+				function init(){
+					$(".car-btn li").bind("click",pagerClick);	//给小按钮绑定点击事件
+					$(".nav-btn span").bind("click",btnClick);//给左右按钮绑定点击事件
+					$(".nav-btn span").hover(btnMouseOver,btnMouseOut);
+				}
+				function pagerClick(){		//小按钮的点击事件
+					isPagerClick=true;		//已经点击
+					clearInterval(handid);	//消除setInterval
+					var oPager=$(this).index();	//获取点击按钮的索引值
+					if(oPager != pre)	//判断点击按钮的位置
+					{
+						index=oPager - 1;	
+						play();
+					}
+				}
+				function btnClick(){
+					if($(this).hasClass("nav-prev")){ //判断点击按钮的 左 或者是 右
+						isPrevClick=true;
+						clearInterval(handid);
+						if(index==0 || index==1)
+						{
+							if(index==0){index=$(".car-img li").length-2;}
+							else{index=$(".car-img li").length-1;}
+						}else
+						{
+							index-=2;
+						}
+						play();
+					}
+					else{
+						isPrevClick=true;
+						clearInterval(handid);
+						play();
+					}
+				}
+				function btnMouseOver(){
+					$(this).addClass("btnhover");
+				}
+				function btnMouseOut(){
+					$(this).removeClass("btnhover");
+				}
+				function play(){
+					index++;
+					if(index == $(".car-img li").length)
+					{
+						index = 0;
+					}
+					$(".car-img li").eq(pre).fadeOut(200,function(){
+						$(".car-img li").eq(index).fadeIn(500,function(){
+							if(isPagerClick)	//判断是否点击了
+							{
+								handid=setInterval(play,2000);	//重新设置setInterval
+								isPagerClick=false;
+							};
+							if(isPrevClick)
+							{	
+								handid=setInterval(play,2000);
+								isPrevClick=false;
+							}
+						}).siblings().fadeOut();
+						$(".car-btn li").eq(index).addClass("car-btn-hover");
+						$(".car-btn li").eq(pre).removeClass("car-btn-hover");
+						pre=index;
+					});
+				}
+			})
+			</script>
+        	<ul class="car-img">
+            	<li><img src="../images/index/slide_02.png"></li>
+                <li><img src="../images/index/slide_01.png"></li>
+                <li><img src="../images/index/slide_05.png"></li>
+                <li><img src="../images/index/slide_04.png"></li>
+                <li><img src="../images/index/slide_03.png"></li>
+            </ul>
+            <div class="nav-btn">
+            	<span class="nav-prev"><</span>
+        		<span class="nav-next">></span>
+            </div>
+            <div class="car-btnbtn">
+                <ul class="car-btn">
+                    <li class="car-btn-hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+</div>
+<!--内容-->
+<div class="about-content">
+	<div class="proDetail-con">
+    	<script type="text/javascript">
+			$(function(){
+				var middleChangeHandler=null;
+				$(".smallImg ul li img").bind("click",function(){	//缩略图加上点击事件
+					middleChange($(this).attr("src").replace("Small","Middle"));//获取src,并执行middleChange函数
+					$(this).parent().addClass("smallImgClick").siblings().removeClass("smallImgClick");//加边框值
+				}).mouseover(function(){				//给缩略图加上mouseover事件
+					
+					window.clearTimeout(middleChangeHandler);
+					middleChange($(this).attr("src").replace("Small","Middle"));
+					
+				}).mouseout(function(){				//给缩略图加上mouseout事件
+					middleChangeHandler=window.setTimeout(function(){	
+						middleChange($(".smallImgClick img").attr("src").replace("Small","Middle"));
+					},100);
+				});
+				function middleChange(src){	
+					$("#midding").attr("src",src).load(function(){	//替换src,并执行changeBigImg函数
+						changeBigImg();
+					});
+				}
+				function changeBigImg(){	//替换大图
+					$(".bigImg img").attr("src",$("#midding").attr("src").replace("Middle","Big"));
+				}
+				changeBigImg();
+				
+				function mouseOver(e){		//中图和winSelector的移入与移动事件
+					if($(".winSelector").css("display") == "none"){	
+						$(".winSelector,.bigImg").show();//显示winSelector
+					}
+					$(".winSelector").css(fixedPosition(e));//利用css改变winSelector的位置，fixedPosition将返回一个参数
+					e.stopPropagation();//法将停止事件的传播,阻止它被分派到其他 Document 节点
+				}
+				function mouseOut(e){		//中图和winSelector的移出事件
+					if($(".winSelector").css("display") != "none"){
+						$(".winSelector,.bigImg").hide();	//隐藏winSelector
+					}
+					e.stopPropagation();
+				}
+				$("#midding").mouseover(mouseOver);		//中图出发mouseover事件
+				$("#midding,.winSelector").mousemove(mouseOver).mouseout(mouseOut);//移动与移出的触发
+				
+				var $divWidth=$(".winSelector").width();	//获得winSelector的宽度
+				var $divHeight=$(".winSelector").height();	//获得winSelector的高度
+				var $imgWidth=$("#midding").width();			//获得中图的宽度
+				var $imgHeight=$("#midding").height();		//获得中图的高度
+				var $bigImgWidth=$bigImgHeight=$height=null;
+				$(".bigImg").scrollLeft(0).scrollTop(0)//从0,0开始
+				function fixedPosition(e){
+					if(e == null){
+						return ;
+					}
+					var $imgLeft=$("#midding").offset().left;	//中图距离左边的距离
+					var $imgTop=$("#midding").offset().top;		//中途距离上边的距离
+					//e.pageX在页面的X坐标
+					X=e.pageX - $imgLeft - $divWidth/2;	
+					//e.pageY在页面的Y坐标	
+					Y=e.pageY - $imgTop - $divHeight/2;
+					X=X<0?0:X;	//X的最小值
+					Y=Y<0?0:Y;
+					X=X+$divWidth > $imgWidth?$imgWidth-$divWidth:X; //X的最大值
+					Y=Y+$divHeight > $imgHeight?$imgHeight-$divHeight:Y;
+					if($bigImgWidth == null){
+						$bigImgWidth = $(".bigImg img").outerWidth();	//大图的宽
+						$bigImgHeight = $(".bigImg img").height();	//大图的高
+						if($bigImgWidth < 200 || $bigImgHeight < 200){
+							$bigImgWidth=$bigImgHeight=800;
+						}
+						$(".bigImg").width(330);
+						$(".bigImg").height(360);//设置大图的高
+					}
+					//获得大图距离左边的位置，按照大图与中图的等比*X
+					var scrollX=X*$bigImgWidth/$imgWidth;
+					var scrollY=Y*$bigImgHeight/$imgHeight;
+					$(".bigImg img").css({"left":scrollX*-1,"top":scrollY*-0.9});//设置大图的位置
+					$(".bigImg").css({"top":0,"left":$(".proDetail-imgList").width()-15});//设置大图外框的位置
+					return {left:X,top:Y};	
+				}
+				
+				
+				var $colorNull=null,$color=null;	//初始化
+				var $colorNull=$(".proDetail-summclas span input:checked").attr("id");
+				var firstColor=$(".proDetail-summclas span").eq(0).find("input").attr("id");
+				if($colorNull!=null)
+				{
+					$color=$colorNull
+				}
+				$(".smallImg ul li").each(	//初始化缩略图
+					function(i){
+							var src=$(".smallImg ul li").eq(i).children().attr("src").replace("Red",firstColor);
+							$(".smallImg ul li").eq(i).children().attr("src",src);
+					}
+				);
+				//初始化中图和大图
+				$("#midding").attr("src",$("#midding").attr("src").replace("Red",firstColor));
+				$(".bigImg img").attr("src",$(".bigImg img").attr("src").replace("Red",firstColor));
+				$(".proDetail-summclas span input").click(function(){	//颜色分类的点击事件
+						var $color=$(this).attr("id");
+						$(".smallImg ul li").each(function(i){
+									var src=$(".smallImg ul li").eq(i).children().attr("src").replace(firstColor,$color);
+									$(".smallImg ul li").eq(i).children().attr("src",src);
+									
+							}
+						);
+						middleChange($("#midding").attr("src").replace(firstColor,$color));
+						$(".bigImg img").attr("src",$(".bigImg img").attr("src").replace(firstColor,$color));
+						firstColor=$color;	//颜色值
+				});
+			})
+		</script>
+		<div class="proDetail-imgList">
+        	<div class="smallImg">
+            	<ul>
+                	<li class="smallImgClick"><img src="../images/product/proSmallRed_01.png"></li>
+                    <li><img src="../images/product/proSmallRed_02.png"></li>
+                    <li><img src="../images/product/proSmallRed_03.png"></li>
+                </ul>
+        	</div>
+            <div class="middleImg">
+       	    	<img src="../images/product/proMiddleRed_01.png" id="midding">
+                <div  class="winSelector"></div>
+            </div>
+            <div class="bigImg">
+            	<img src="../images/product/proBigRed_01.png">
+            </div>
+      	</div>
+        <div class="proDetail-summ">
+       	  <h3><p>修身制服</p><span>订购热线:<em>400-0910-888</em></span></h3>
+      		<ul>
+            	<li><span>产品号:</span><em>GM10092015</em></li>
+                <li><span>适合季节:</span>四季</li>
+                <li><span>风格:</span>修身</li>
+            </ul>
+          <p>描述：经典格围巾面料色泽亮丽但不刺眼，柔和的亚光，类似珍珠的光泽感，凸显其高贵的气质，在真丝绸各类品种中，乔其缎的各项性能都比较优秀，既有双绉类织物比较抗皱的优点，又有缎类织物光滑柔软的特性。是桑蚕丝中的经典、高端面料。</p>
+          	<form action="">
+                <div class="proDetail-summclas">
+                    <em>选择颜色</em>
+                    <span><input type="radio" id="Red" name="classify" checked><label for="Red"><img src="../images/product/proSelRed_01.png"></label></span>
+                    <span><input type="radio" id="Green" name="classify"><label for="Green"><img src="../images/product/proSelGreen_02.png"></label></span>
+                    <span><input type="radio" id="Blue" name="classify"><label for="Blue"><img src="../images/product/proSelBlue_03.png"></label></span>
+                    <span><input type="radio" id="Black" name="classify"><label for="Black"><img src="../images/product/proSelBlack_04.png"></label></span>
+                </div>
+                <div class="proDetail-summsize">
+                    <em>选择尺码</em>
+                  <span><input type="radio" id="XS" name="size"><label for="XS">XS</label></span>
+                  <span><input type="radio" id="S" name="size"><label for="S">S</label></span>
+                  <span><input type="radio" id="M" name="size"><label for="M">M</label></span>
+                  <span><input type="radio" id="L" name="size"><label for="L">L</label></span>
+                  <span><input type="radio" id="XL" name="size"><label for="XL">XL</label></span>
+                  <span><input type="radio" id="XXL" name="size"><label for="XXL">XXL</label></span>
+                  <span><input type="radio" id="3XL" name="size"><label for="3XL">3XL</label></span>
+                    <b>尺码表</b>
+                </div>
+                <div class="proDetail-send">
+                	<script type="text/javascript">
+						$(function(){
+							$("#send").click(function(){
+								if($("input[name=classify]:checked").length == 0 || $("input[name=size]:checked").length == 0){
+									return false;
+								}
+							});
+						})
+					</script>
+                	<input type="submit" value="在线下单" id="send">
+                    <span>没有想要的款式，点击<a href="#">个性化定制此类</a></span>
+                    <div class="proDetail-footshare">
+                    	<p>分享</p>
+                        <div>
+                        	<script type="text/javascript">
+								$(function(){
+									$(".proDetail-footshare > div").hover(function(){
+										$(".send-share").animate({top:"-125px",zIndex:"1"},200);
+									},function(){
+										$(".send-share").animate({zIndex:"-1"},200);
+										$(".send-share").animate({top:"0px"},500);
+									});
+									$(".send-share").mouseenter(function(){
+										$(this).show();
+									}).mouseleave(function(){
+										$(this).animate({zIndex:"-1"},200);
+										$(this).animate({top:"0px"},500);
+									});
+									$("#weixin").mouseover(function(){
+										$(this).attr("src",$(this).attr("src").replace("6","7"));
+									}).mouseout(function(){
+										$(this).attr("src",$(this).attr("src").replace("7","6"));});
+									$("#weibo").mouseover(function(){
+										$(this).attr("src",$(this).attr("src").replace("8","9"));
+									}).mouseout(function(){
+										$(this).attr("src",$(this).attr("src").replace("9","8"));});
+								})
+							</script>
+               	  			<img src="../images/about/news_06.png" width="20" height="15" id="weixin">
+                            <div class="send-share">
+                       	    	<img src="../images/index/go_06.png">
+                                <p>用微信扫描二维码分享至好友朋友圈</p>
+                            </div>
+                  		</div>
+                        <em>|</em>
+                        <a href=""><img src="../images/about/news_08.png" width="20" height="15" id="weibo"></a>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="proDetail-sizetable">
+    	<span>
+        	<em></em>
+            <img src="../images/product/pro_002.png" width="548" height="333">
+            <script type="text/javascript">
+				$(function(){
+					$(".proDetail-summsize b").click(function(){
+						$(".proDetail-sizetable").show();
+					})
+					$(".proDetail-sizetable em").click(function(){
+						$(".proDetail-sizetable").hide();
+					});
+				})
+			</script>
+        </span>
+    </div>
+	<div class="proDetailbox">
+    	<div class="proDetail-slide">
+        	<h2>推荐产品</h2>
+             <div class="proDetail-btn">
+                <div class="proDetail-prevbtn">&lt;</div>
+                <div class="proDetail-nextbtn">&gt;</div>
+            </div>
+        	<div class="proDetail-img">
+            	<script type="text/javascript">
+					$(function(){
+						$(".proDetail-img").scrollLeft(960);
+						$(".proDetail-btn div").bind("click",btnClick);
+						function btnClick(){
+							if($(this).hasClass("proDetail-prevbtn")){
+								$(".proDetail-img").animate({scrollLeft:$(".proDetail-img").scrollLeft()+240});
+							}else{
+								$(".proDetail-img").animate({scrollLeft:$(".proDetail-img").scrollLeft()-240});
+							}
+						}
+					})
+				</script>         
+                <ul>
+                    <li><img src="../images/product/proDe_01.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_02.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_03.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_04.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_01.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_02.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_03.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_04.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_01.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_02.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_03.png"><a href=""><span>职业装啊啊11</span></a></li>
+                    <li><img src="../images/product/proDe_04.png"><a href=""><span>职业装啊啊11</span></a></li>
+                </ul>
+            </div>
+            
+      </div>
+    </div>
+	<div class="proDetailbox-data">
+    	<div class="proDetail-data">
+        	<h2>只用最优质的材料</h2>
+        	<p>
+   	  			<img src="../images/product/proDe_001.png" width="382" height="254">
+            	<img src="../images/product/proDe_002.png" width="382" height="254">
+            	<img src="../images/product/proDe_003.png" width="382" height="254">
+            </p>
+            <p><span>给全中国儿童带来快乐！我们潜心研究玩具设计的精髓，不断提高玩具制作的水平，改良制作工艺，注重安全性检测，对产品的造型、手感、质量精益求精。不懈的努力只为能制造出可爱的安全的玩具。我们的事业是快乐的，我们的玩具将会给更多的人带来快乐</span> </p>
+            <p><span>北京极美玩具有限公司是专业设计生产销售毛绒玩具的企业，位于北京大兴工业开发区。其前身北京数码玩具有限公司成立于1992年8月。至今已有22年的开发设计、生产毛绒玩具的历史。产品远销美国，欧洲，澳大利亚，南非，俄罗斯等国家和地区，在国际市场上享有良好声誉。同时为国内很多知名企业和事业单位提供吉祥物、礼品、道具等各种毛绒玩具的设计和生产服务。</span> </p>
+            <p><span>给全中国儿童带来快乐！我们潜心研究玩具设计的精髓，不断提高玩具制作的水平，改良制作工艺，注重安全性检测，对产品的造型、手感、质量精益求精。不懈的努力只为能制造出可爱的安全的玩具。我们的事业是快乐的，我们的玩具将会给更多的人带来快乐</span> </p>
+            <p><span>北京极美玩具有限公司是专业设计生产销售毛绒玩具的企业，位于北京大兴工业开发区。其前身北京数码玩具有限公司成立于1992年8月。至今已有22年的开发设计、生产毛绒玩具的历史。产品远销美国，欧洲，澳大利亚，南非，俄罗斯等国家和地区，在国际市场上享有良好声誉。同时为国内很多知名企业和事业单位提供吉祥物、礼品、道具等各种毛绒玩具的设计和生产服务。</span> </p>
+      	</div>
+    </div>
+    <div class="proDetail-go">
+    	<h2>配送无忧</h2>
+    	<img src="../images/product/proDe_005.png">
+        <div class="proDetail-text">
+        	<h3>——全程跟踪 为您保驾护航</h3>
+            <p>给全中国儿童带来快乐！我们潜心研究玩具设计的精髓，不断提高玩具制作的水平，改良制作工艺，注重安全性检测，对产品的造型、手感、质量精益求精。不懈的努力只为能制造出可爱的安全的玩具。我们的事业是快乐的，我们的玩具将会给更多的人带来快乐。</p>
+            <h3>——准时送达 承诺重于泰山 </h3>
+            <p>给全中国儿童带来快乐！我们潜心研究玩具设计的精髓，不断提高玩具制作的水平，改良制作工艺，注重安全性检测，对产品的造型、手感、质量精益求精。不懈的努力只为能制造出可爱的安全的玩具。我们的事业是快乐的，我们的玩具将会给更多的人带来快乐。</p>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="foot-box">
+    	<div class="foot-copyright">
+        	<img src="../images/index/foot_01.png" width="51" height="39">
+   	  	  	<p>极美服装制衣有限公司<span>Copyright © 2015.company name all rights reserved.<img src="../images/index/foot_02.gif" width="50" height="12"></span></p>
+        </div>
+        <div class="foot-other">
+        	<a href="">==&nbsp;后台管理&nbsp;==</a>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goback">
+	<div class="follow">
+    	<span>关注我们</span>
+    	<p><img src="../images/index/go_06.png" width="36" height="37"></p> 
+    </div>
+  	<div class="custom">
+    	<a href="">在线客服</a>
+  	</div>
+  	<div class="query">
+    	<a href="">订单<br>查询</a>
+    </div>
+    <script type="text/javascript">
+		$(function(){
+			$(".gotop").click(function(){
+				$("html,body").animate({scrollTop:"0"},500);
+			});
+		})
+	</script>
+  	<div class="gotop">
+    </div>
+</div>
+</body>
+</html>
+
+
+

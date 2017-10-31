@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站-注册</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+//图片上传预览    IE是用了滤镜。
+function previewImage(file)
+        {
+          var MAXWIDTH  = 80; 
+          var MAXHEIGHT = 80;
+          var div = document.getElementById('preview');
+          if (file.files && file.files[0])
+          {
+              div.innerHTML ='<img id="imghead">';
+              var img = document.getElementById('imghead');
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                img.style.marginTop = rect.top+'px';
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead>';
+            var img = document.getElementById('imghead');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+            var param = {top:0, left:0, width:width, height:height};
+            if( width>maxWidth || height>maxHeight )
+            {
+                rateWidth = width / maxWidth;
+                rateHeight = height / maxHeight;
+                
+                if( rateWidth > rateHeight )
+                {
+                    param.width =  maxWidth;
+                    param.height = Math.round(height / rateWidth);
+                }else
+                {
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxHeight;
+                }
+            }
+            
+            param.left = Math.round((maxWidth - param.width) / 2);
+            param.top = Math.round((maxHeight - param.height) / 2);
+            return param;
+        }
+</script>
+<script type="text/javascript">     
+	$(function(){
+		var nameRegVal=/^[a-z0-9\u4e00-\u9fa5-]{6,20}$/;
+		var phoneRegVal=/^[1-9]\d{10}$/;
+		var pwdRegVal=/^[a-z0-9-]{8,18}$/;
+		var portRegVal=/^(\d{3,4}-)?\d{7,8}$/; 
+		var codeRegVal=/^\d{6}$/;
+		var addressRegVal=/^[A-Za-z0-9\u4e00-\u9fa5-]{1,50}$/;
+		$("form :input").blur(function(){
+			if($(this).is("#name")){
+				if($(this).value=="" || !nameRegVal.test($(this).val())){
+					$(this).siblings("span").text("请输入6-20位字符，支持汉字、字母、数字、'-'组合").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#phone")){
+				if($(this).value=="" || !phoneRegVal.test($(this).val())){
+					$(this).siblings("span").text("请输入正确的手机号!").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#pwd")){
+				if($(this).value=="" || !pwdRegVal.test($(this).val())){
+					$(this).siblings("span").text("请输入8-18位字符，支持字母、数字、'-'组合").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#repwd")){
+				if($(this).value=="" || $(this).val()!=$("#pwd").val()){
+					$(this).siblings("span").text("请与密码输入一致!").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#port")){
+				if($(this).value=="" || !portRegVal.test($(this).val())){
+					$(this).siblings("span").text("格式为:XXX-12345678或XXXX-1234567或XXXX-12345678").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#code")){
+				if($(this).value=="" || !codeRegVal.test($(this).val())){
+					$(this).siblings("span").text("请输入正确的邮编!").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+			if($(this).is("#address")){
+				if($(this).value=="" || !addressRegVal.test($(this).val())){
+					$(this).siblings("span").text("请输入只包含文字、字母、数字、-的住址!").show().addClass("error");
+				}else{
+					$(this).siblings("span").hide().removeClass("error");
+				}
+			}
+			
+		}).keyup(function(){
+		   $(this).triggerHandler("blur");
+		}).focus(function(){
+	  	   $(this).triggerHandler("blur");
+		});
+		$('#send').click(function(){
+				$("form :input").trigger('blur');
+				var numError = $('form .error').length;
+				if(numError || $("#preview").find("img").attr("src")==""){
+					return false;
+				} 
+				
+		 });
+	})
+</script>
+</head>
+<body>
+	<div class="loginbox">
+    	<p><img src="../images/index/header_02.png" width="260" height="90"></p>
+    </div>
+<div class="loginbox-form register-form">
+    	<form action="">
+        	<p><input type="text" placeholder="请输入呢称" id="name"><span></span></p>
+            <p><input type="text" placeholder="请输入电话" id="phone"><span></span></p>
+            <p><input type="text" placeholder="请输入传真" id="port"><span></span></p>
+            <p><input type="text" placeholder="请输入地址" id="address"><span></span></p>
+            <p><input type="text" placeholder="请输入邮编" id="code"><span></span></p> 
+            <p><input type="password" placeholder="请输入密码" id="pwd"><span></span></p>
+            <p><input type="password" placeholder="确认密码" id="repwd"><span></span></p>
+            <p class="upload">
+            	<script type="text/javascript">
+					$(function(){
+						$(".upload label").hover(function(){$(this).next().show()},function(){$(this).next().hide()});
+					});
+				</script>
+            	<label><input id="file" type="file" onchange="previewImage(this)">上传头像</label>
+                <span>请输入100*100像素以下的图片</span>
+            	<b id="preview">
+                    <img id="imghead" src=''>
+                </b> 
+            </p>
+            <p><input type="submit" value="注  册" id="send"></p>
+        </form>
+    	<p class="loginbox-text">已有集美帐号?<a href="">立即登录</a><span>&rarr;</span></p>
+  </div>
+    <p class="login-copy">— 集美制衣有限公司 —</p>
+</body>
+</html>
+

@@ -1,0 +1,852 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>集美制衣网站-联系我们</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&amp;v=1.1&amp;services=true"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.1&amp;ak=&amp;services=true&amp;t=20130716024058"></script>
+<link rel="stylesheet" type="text/css" href="http://api.map.baidu.com/res/11/bmap.css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<!--导航-->
+	<div class="head">
+    	<div class="msg">
+        	<div class="phone">咨询热线：<span>400-0910-888</span></div>
+            <div class="login"><a href="">登录</a><span>|</span><a href="">注册</a></div>
+        </div>
+        <div class="logo-nav">
+        	<div class="logo">
+            	<img src="../images/index/header_02.png">
+            </div>
+            <div class="nav">
+            	<script type="text/javascript">
+					$(function(){
+						$(".nav ul > li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find("ul").slideDown(600);
+							},
+							function(){
+								$(this).find("span").animate({left:"-116px"});
+								$(this).find("ul").slideUp(600);
+							}
+						)
+					})
+				</script>
+            	<ul>
+                	<li><a href="">网站首页<span></span></a></li>
+                    <li><a href="">关于我们<span></span></a>
+                    	<ul>
+                        	<li><a href="">荣誉资质</a></li>
+                            <li><a href="">企业文化</a></li>
+                            <li><a href="">企业实力</a></li>
+                            <li><a href="">大事记</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">产品服务<span></span></a>
+                    	<ul>
+                        	<li><a href="">职业装</a></li>
+                            <li><a href="">羽绒服</a></li>
+                            <li><a href="">毛呢外套</a></li>
+                            <li><a href="">针织毛衣</a></li>
+                            <li><a href="">风衣</a></li>
+                            <li><a href="">卫衣</a></li>
+                            <li><a href="">T恤</a></li>
+                            <li><a href="">连衣裙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">制衣流程<span></span></a></li>
+                    <li><a href="">新闻资讯<span></span></a>
+                    	<ul>
+                        	<li><a href="">公司新闻</a></li>
+                            <li><a href="">订单动态</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">服务中心<span></span></a>
+                    	<ul>
+                        	<li><a href="">在线订单</a></li>
+                            <li><a href="">营销网络</a></li>
+                            <li><a href="">在线留言</a></li>
+                            <li><a href="">留言列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">合作伙伴<span></span></a></li>
+                    <li><a href="">联系我们<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图滚动-->
+    <div class="slide">
+    	<div class="search-box">
+        	<div class="search-boxwrap">
+                <div class="order-search">
+                    <p>订单查询</p>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="text" placeholder="请输入订单号">
+                            <input type="submit" class="search-detail" value="搜索">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-form input[type=text]").focus(
+                            function(){
+                                $(".order-about").slideDown();
+                                $(this).animate({height:"90px"}).addClass("inputfocus");
+                                $(".search-form .search-detail").addClass("btnfocus");
+                            }
+                        );
+                        $(".search-boxwrap").mouseenter(function(){
+                            
+                        }).mouseleave(function(){
+                            $(".order-about").slideUp();
+                            $(".search-form input[type=text]").animate({height:"30px"}).removeClass("inputfocus").blur();
+                            $(".search-form .search-detail").removeClass("btnfocus");
+                        });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-detail").click(function(){
+                            if($(".search-form input[type=text]").val() == ""){
+                                return false;
+                            }
+                        });
+                    })
+                </script>
+                <div class="order-about">
+                    <div class="line-order">
+                        <a href=""><em>新</em>在线下单<span>急速下单，无需等待!</span></a>
+                    </div>
+                    <div class="custom">
+                        <p>客服热线<span>400-0910-888</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-slide">
+        	<script type="text/javascript">
+			$(function(){
+				var isPagerClick=false,		//判断底下的小按钮
+					isPrevClick=false,		//判断左右滑动的按钮
+					index=0,	//目标值
+					pre=0,
+					handid;
+				start();
+				function start(){
+					init();	//初始化函数
+					$(".car-img li").eq(0).fadeIn().siblings().fadeOut();
+					handid = setInterval(play,2000);	//轮播
+				}
+				function init(){
+					$(".car-btn li").bind("click",pagerClick);	//给小按钮绑定点击事件
+					$(".nav-btn span").bind("click",btnClick);//给左右按钮绑定点击事件
+					$(".nav-btn span").hover(btnMouseOver,btnMouseOut);
+				}
+				function pagerClick(){		//小按钮的点击事件
+					isPagerClick=true;		//已经点击
+					clearInterval(handid);	//消除setInterval
+					var oPager=$(this).index();	//获取点击按钮的索引值
+					if(oPager != pre)	//判断点击按钮的位置
+					{
+						index=oPager - 1;	
+						play();
+					}
+				}
+				function btnClick(){
+					if($(this).hasClass("nav-prev")){ //判断点击按钮的 左 或者是 右
+						isPrevClick=true;
+						clearInterval(handid);
+						if(index==0 || index==1)
+						{
+							if(index==0){index=$(".car-img li").length-2;}
+							else{index=$(".car-img li").length-1;}
+						}else
+						{
+							index-=2;
+						}
+						play();
+					}
+					else{
+						isPrevClick=true;
+						clearInterval(handid);
+						play();
+					}
+				}
+				function btnMouseOver(){
+					$(this).addClass("btnhover");
+				}
+				function btnMouseOut(){
+					$(this).removeClass("btnhover");
+				}
+				function play(){
+					index++;
+					if(index == $(".car-img li").length)
+					{
+						index = 0;
+					}
+					$(".car-img li").eq(pre).fadeOut(200,function(){
+						$(".car-img li").eq(index).fadeIn(500,function(){
+							if(isPagerClick)	//判断是否点击了
+							{
+								handid=setInterval(play,2000);	//重新设置setInterval
+								isPagerClick=false;
+							};
+							if(isPrevClick)
+							{	
+								handid=setInterval(play,2000);
+								isPrevClick=false;
+							}
+						}).siblings().fadeOut();
+						$(".car-btn li").eq(index).addClass("car-btn-hover");
+						$(".car-btn li").eq(pre).removeClass("car-btn-hover");
+						pre=index;
+					});
+				}
+			})
+			</script>
+        	<ul class="car-img">
+            	<li><img src="../images/index/slide_02.png"></li>
+                <li><img src="../images/index/slide_01.png"></li>
+                <li><img src="../images/index/slide_05.png"></li>
+                <li><img src="../images/index/slide_04.png"></li>
+                <li><img src="../images/index/slide_03.png"></li>
+            </ul>
+            <div class="nav-btn">
+            	<span class="nav-prev"><</span>
+        		<span class="nav-next">></span>
+            </div>
+            <div class="car-btnbtn">
+                <ul class="car-btn">
+                    <li class="car-btn-hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+</div>
+<!--内容-->
+<div class="about-content">
+  <div class="about-profilebox"> 
+  	<span>联系我们</span>
+    <p><a href="">首页&nbsp;>&nbsp;</a><span>联系我们</span></p>
+  </div>
+  <div class="touchbox">
+    <div class="touchbox-map">
+      <div style="width: 697px; height: 550px; border: 1px solid rgb(220, 220, 220); overflow: hidden; position: relative; z-index: 0; color: rgb(0, 0, 0); text-align: left; background-image: url(&quot;http://api.map.baidu.com/images/bg.png&quot;);" id="dituContent">
+        <div id="platform" style="overflow: visible; position: absolute; z-index: 0; left: 541px; top: 24px; cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
+          <div style="position: absolute; z-index: -1; left: 348px; top: 275px; display: block;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=6&amp;y=2&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -183px; top: -114px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=5&amp;y=2&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -247px; top: -114px;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=5&amp;y=3&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -247px; top: -178px;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=7&amp;y=1&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -119px; top: -50px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=4&amp;y=3&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -311px; top: -178px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=6&amp;y=1&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -183px; top: -50px;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=6&amp;y=3&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -183px; top: -178px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=7&amp;y=3&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -119px; top: -178px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=5&amp;y=1&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -247px; top: -50px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=4&amp;y=2&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -311px; top: -114px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=4&amp;y=1&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -311px; top: -50px;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=7&amp;y=2&amp;z=5&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 64px; height: 64px; left: -119px; top: -114px;"></div>
+          <div id="mask" class=" BMap_mask" style="position: absolute; left: -541px; top: -24px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 697px; height: 550px;"></div>
+          <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;">
+              <div class="pop" style="position: absolute; cursor: default; left: 76px; top: 72px; display: none;">
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 0px; width: 25px; height: 25px;"><img style="border:none;margin:0px;padding:0px;position:absolute;left:0px;top:0px;width:690px;height:786px;" src="http://api.map.baidu.com/images/iw3.png"></div>
+                <div class="top" style="overflow: hidden; z-index: 1; position: absolute; left: 25px; top: 0px; width: 202px; height: 25px;"><img src="http://api.map.baidu.com/images/iw3.png" style="position:absolute; left: -65px; top: -60px;"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 227px; top: 0px; width: 25px; height: 25px;"><img style="border:none;margin:0px;padding:0px;position:absolute;left:-665px;top:0px;width:690px;height:786px;" src="http://api.map.baidu.com/images/iw3.png"></div>
+                <div class="center" style="overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 25px; width: 250px; height: 37px;"><img src="http://api.map.baidu.com/images/iw3.png" style="position:absolute;left:-65px;top:-60px;"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 62px; width: 25px; height: 25px;"><img style="border:none;margin:0px;padding:0px;position:absolute;left:0px;top:-665px;width:690px;height:786px;" src="http://api.map.baidu.com/images/iw3.png"></div>
+                <div class="bottom" style="overflow: hidden; z-index: 1; position: absolute; left: 25px; top: 62px; width: 202px; height: 24px;"><img src="http://api.map.baidu.com/images/iw3.png" style="position:absolute;left:-65px;top:-146px;"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 227px; top: 62px; width: 25px; height: 25px;"><img style="border:none;margin:0px;padding:0px;position:absolute;left:-665px;top:-665px;width:690px;height:786px;" src="http://api.map.baidu.com/images/iw3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 109px; top: 62px; width: 34px; height: 50px;"><img style="border:none;margin:0px;padding:0px;position:absolute;left:-186px;top:-691px;width:690px;height:786px;" src="http://api.map.baidu.com/images/iw3.png"></div>
+                <div style="width: 220px; height: 55px; position: absolute; left: 16px; top: 16px; z-index: 10; overflow: hidden;">
+                  <div class="BMap_bubble_title" style="display: none; overflow: hidden; height: auto; line-height: 24px; white-space: nowrap; width: auto;"></div>
+                  <div class="BMap_bubble_content" style="width: auto; height: auto;"><b class="iw_poi_title" title="极美制衣有限公司">极美制衣有限公司</b>
+                    <div class="iw_poi_content">电话：400-6258-958<br>
+                      地址：亦庄经济技术开发区地盛西路1号</div>
+                  </div>
+                  <div class="BMap_bubble_max_content" style="display:none;position:relative"></div>
+                </div>
+                <img style="position: absolute; top: 12px; width: 12px; height: 12px; cursor: pointer; z-index: 10000; left: 227px;" src="http://api.map.baidu.com/images/iw_close.gif"><img style="position: absolute; top: 12px; width: 12px; height: 12px; cursor: pointer; z-index: 10000; display: none; left: 207px;" src="http://api.map.baidu.com/images/iw_plus.gif"></div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span class="BMap_Marker BMap_noprint" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 23px; height: 25px; left: 168px; top: 182px; z-index: -7957700; background: url(&quot;http://api.map.baidu.com/images/blank.gif&quot;);" title=""></span></div>
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;">
+              <div class="shadow" style="position: absolute; left: 54px; top: 116px; display: none;" type="infowindow_shadow">
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 36px; top: 0px; width: 70px; height: 30px;"><img onmousedown="return false" style="left: -323px; top: 0px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 106px; top: 0px; width: 163px; height: 30px;"><img onmousedown="return false" style="left: -393px; top: 0px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 269px; top: 0px; width: 70px; height: 30px;"><img onmousedown="return false" style="left: -1033px; top: 0px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 29px; top: 30px; width: 77px; height: 7px;"><img onmousedown="return false" style="top: -30px; left: -316px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 106px; top: 30px; width: 185px; height: 7px;"><img onmousedown="return false" style="left: -360px; top: -30px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 291px; top: 30px; width: 77px; height: 7px;"><img onmousedown="return false" style="top: -30px; left: -1056px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 0px; top: 37px; width: 50px; height: 60px;"><img onmousedown="return false" style="left: -14px; top: -310px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 50px; top: 37px; width: 11px; height: 60px;"><img onmousedown="return false" style="left: -255px; top: -310px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 61px; top: 37px; width: 140px; height: 60px;"><img onmousedown="return false" style="left: -440px; top: -310px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 201px; top: 37px; width: 61px; height: 60px;"><img onmousedown="return false" style="left: -255px; top: -310px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+                <div style="overflow: hidden; z-index: 1; position: absolute; left: 262px; top: 37px; width: 70px; height: 60px;"><img onmousedown="return false" style="left: -754px; top: -310px;" src="http://api.map.baidu.com/images/iws3.png"></div>
+              </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div>
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 177px; top: 207px; z-index: -7957700;">
+              <div style="position: absolute; margin: 0px; padding: 0px; width: 23px; height: 25px; left: -9px; top: -25px; overflow: hidden;"><img src="http://app.baidu.com/map/images/us_mk_icon.png" style="border:none;left:-46px; top:-21px; position:absolute;"></div>
+              <label class=" BMapLabel" unselectable="on" style="position: absolute; cursor: pointer; border: 1px solid rgb(128, 128, 128); padding: 1px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: arial, simsun; z-index: 80; color: rgb(51, 51, 51); -webkit-user-select: none; left: 13px; top: -20px; background-color: rgb(255, 255, 255);">极美制衣有限公司</label>
+              </span></div>
+            <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div>
+          </div>
+          <div style="position: absolute; z-index: -1; left: -193px; top: 251px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=0&amp;y=1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -26px; top: -410px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=0&amp;y=0&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -26px; top: -154px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=M1&amp;y=1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -282px; top: -410px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=M1&amp;y=0&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -282px; top: -154px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=M2&amp;y=0&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -538px; top: -154px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=1&amp;y=0&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: 230px; top: -154px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=1&amp;y=1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: 230px; top: -410px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=1&amp;y=M1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: 230px; top: 102px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=0&amp;y=M1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -26px; top: 102px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=M1&amp;y=M1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -282px; top: 102px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=M2&amp;y=1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -538px; top: -410px;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=M2&amp;y=M1&amp;z=3&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -538px; top: 102px;"></div>
+        </div>
+        <div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default">
+          <div class="BMap_zoomer" style="top:0;left:0;"></div>
+          <div class="BMap_zoomer" style="top:0;right:0;"></div>
+          <div class="BMap_zoomer" style="bottom:0;left:0;"></div>
+          <div class="BMap_zoomer" style="bottom:0;right:0;"></div>
+        </div>
+        <div class=" anchorBL" style="height: 32px; position: absolute; z-index: 10; bottom: 0px; right: auto; top: auto; left: 1px;"><a title="到百度地图首页" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="http://api.map.baidu.com/images/copyright_logo.png"></a></div>
+        <div unselectable="on" class=" BMap_cpyCtrl anchorBL" style="cursor: default; white-space: nowrap; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10;"><span style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: arial, simsun; display: inline; background: none;" _cid="1">© 2015 Baidu</span></div>
+        <div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorTL" style="width: 52px; height: 226px; bottom: auto; right: auto; top: 10px; left: 10px; position: absolute; z-index: 1100;">
+          <div class="BMap_stdMpPan">
+            <div class="BMap_button BMap_panN" title="向上平移"></div>
+            <div class="BMap_button BMap_panW" title="向左平移"></div>
+            <div class="BMap_button BMap_panE" title="向右平移"></div>
+            <div class="BMap_button BMap_panS" title="向下平移"></div>
+            <div class="BMap_stdMpPanBg BMap_smcbg"></div>
+          </div>
+          <div class="BMap_stdMpZoom" style="height: 167px; width: 52px;">
+            <div style="height: 167px; width: 37px;">
+              <div class="BMap_button BMap_stdMpZoomIn" title="放大一级">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_button BMap_stdMpZoomOut" title="缩小一级">
+                <div class="BMap_smcbg"></div>
+              </div>
+            </div>
+            <div class="BMap_stdMpSlider" style="height: 133px;">
+              <div class="BMap_stdMpSliderBgTop" style="height: 124px;">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_stdMpSliderBgBot" style="top: 124px;">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_stdMpSliderMask" title="放置到此级别"></div>
+              <div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default; top: 106px;">
+                <div class="BMap_smcbg"></div>
+              </div>
+            </div>
+            <div class="BMap_zlHolder">
+              <div class="BMap_zlSt">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_zlCity">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_zlProv">
+                <div class="BMap_smcbg"></div>
+              </div>
+              <div class="BMap_zlCountry">
+                <div class="BMap_smcbg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div unselectable="on" class=" BMap_omCtrl BMap_noprint anchorBR quad4" style="width: 150px; height: 150px; bottom: 0px; right: 0px; top: auto; left: auto; position: absolute; z-index: 10;">
+          <div class="BMap_omOutFrame" style="width: 149px; height: 149px;">
+            <div class="BMap_omInnFrame" style="bottom: auto; right: auto; top: 8px; left: 8px; width: 139px; height: 139px;">
+              <div class="BMap_omMapContainer" style="overflow: hidden; color: rgb(0, 0, 0); text-align: left; background-image: url(&quot;http://api.map.baidu.com/images/bg.png&quot;);">
+                <div id="platform" style="overflow: visible; position: absolute; z-index: 0; left: 138px; top: -2px; cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
+                  <div id="mask" class=" BMap_mask" style="position: absolute; left: -138px; top: 2px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 139px; height: 139px;"></div>
+                  <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
+                      <div class="BMap_Division" style="position: absolute; width: 44px; display: none; overflow: hidden; border-width: 1px; border-style: solid; border-color: rgb(173, 207, 244) rgb(39, 75, 139) rgb(39, 75, 139) rgb(132, 176, 223); opacity: 1; z-index: 60; -webkit-user-select: none; left: -91px; top: 52px; height: 38px;">
+                        <div class="BMap_omViewInnFrame" style="width: 42px; height: 36px;">
+                          <div class="BMap_omViewMask"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div>
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div>
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"></div>
+                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div>
+                  </div>
+                  <div style="position: absolute; z-index: -1; left: -68px; top: 71px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=0&amp;y=0&amp;z=1&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -6px; top: -229px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=0&amp;y=M1&amp;z=1&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -6px; top: 27px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=M1&amp;y=M1&amp;z=1&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -262px; top: 27px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=M1&amp;y=0&amp;z=1&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -262px; top: -229px;"></div>
+                </div>
+              </div>
+              <div class="BMap_omViewMv" style="cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default; width: 44px; height: 38px; left: 47px; top: 50px; display: none;">
+                <div class="BMap_omViewInnFrame" style="width: 42px; height: 36px;">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="BMap_omBtn" style="bottom: 0px; right: 0px; top: auto; left: auto;"></div>
+        </div>
+        <div unselectable="on" class=" BMap_scaleCtrl BMap_noprint anchorBL" style="bottom: 18px; right: auto; top: auto; left: 81px; width: 74px; position: absolute; z-index: 10;">
+          <div class="BMap_scaleTxt" unselectable="on">2000&nbsp;公里</div>
+          <div class="BMap_scaleBar BMap_scaleHBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div>
+          <div class="BMap_scaleBar BMap_scaleLBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div>
+          <div class="BMap_scaleBar BMap_scaleRBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+				//创建和初始化地图函数：
+				function initMap(){
+					createMap();//创建地图
+					setMapEvent();//设置地图事件
+					addMapControl();//向地图添加控件
+					addMarker();//向地图中添加marker
+				}
+				
+				//创建地图函数：
+				function createMap(){
+					var map = new BMap.Map("dituContent");//在极美地图容器中创建一个地图
+					var point = new BMap.Point(116.506153,39.7885);//定义一个中心点坐标
+					map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+					window.map = map;//将map变量存储在全局
+				}
+				
+				//地图事件设置函数：
+				function setMapEvent(){
+					map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+					map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+					map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+					map.enableKeyboard();//启用键盘上下左右键移动地图
+				}
+				
+				//地图控件添加函数：
+				function addMapControl(){
+					//向地图中添加缩放控件
+				var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+				map.addControl(ctrl_nav);
+					//向地图中添加缩略图控件
+				var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+				map.addControl(ctrl_ove);
+					//向地图中添加比例尺控件
+				var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+				map.addControl(ctrl_sca);
+				}
+				
+				//标注点数组
+				var markerArr = [{title:"极美制衣有限公司",content:"电话：400-6258-958</br>地址：亦庄经济技术开发区地盛西路1号",point:"116.506153|39.7885",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+					 ];
+				//创建marker
+				function addMarker(){
+					for(var i=0;i<markerArr.length;i++){
+						var json = markerArr[i];
+						var p0 = json.point.split("|")[0];
+						var p1 = json.point.split("|")[1];
+						var point = new BMap.Point(p0,p1);
+						var iconImg = createIcon(json.icon);
+						var marker = new BMap.Marker(point,{icon:iconImg});
+						var iw = createInfoWindow(i);
+						var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+						marker.setLabel(label);
+						map.addOverlay(marker);
+						label.setStyle({
+									borderColor:"#808080",
+									color:"#333",
+									cursor:"pointer"
+						});
+						
+						(function(){
+							var index = i;
+							var _iw = createInfoWindow(i);
+							var _marker = marker;
+							_marker.addEventListener("click",function(){
+								this.openInfoWindow(_iw);
+							});
+							_iw.addEventListener("open",function(){
+								_marker.getLabel().hide();
+							})
+							_iw.addEventListener("close",function(){
+								_marker.getLabel().show();
+							})
+							label.addEventListener("click",function(){
+								_marker.openInfoWindow(_iw);
+							})
+							if(!!json.isOpen){
+								label.hide();
+								_marker.openInfoWindow(_iw);
+							}
+						})()
+					}
+				}
+				//创建InfoWindow
+				function createInfoWindow(i){
+					var json = markerArr[i];
+					var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+					return iw;
+				}
+				//创建一个Icon
+				function createIcon(json){
+					var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+					return icon;
+				}
+				
+				initMap();//创建和初始化地图
+			</script> 
+    </div>
+    <div class="touchbox-text">
+    	<div class="touchbox-texttop" style="padding-bottom:10px;border-bottom:1px solid #ccc;">
+    		<h4>极美制衣有限公司</h4>
+            <p>地址</p>
+            <span>北京市大兴区亦庄经济技术开发区地盛西路1号数码庄园</span>
+            <p>前台总机</p>
+            <span>010-87127210</span>
+            <p>传真</p>
+            <span>010-87127210</span>
+    	</div>
+        <script type="text/javascript">
+				(function($){
+					$.zUI = $.zUI || {}
+					$.zUI.emptyFn = function(){};
+					$.zUI.asWidget = [];
+					/*
+					 * core代码，定义增加一个插件的骨架
+					 */
+					$.zUI.addWidget = function(sName,oSefDef){
+						//设置规范中的常量sFlagName、sEventName、sOptsName
+						$.zUI.asWidget.push(sName);
+						var w = $.zUI[sName] = $.zUI[sName] || {};
+						var sPrefix = "zUI" + sName
+						w.sFlagName = sPrefix;
+						w.sEventName = sPrefix + "Event";
+						w.sOptsName = sPrefix + "Opts";
+						w.__creator = $.zUI.emptyFn;
+						w.__destroyer = $.zUI.emptyFn;
+						$.extend(w,oSefDef);
+						w.fn = function(ele,opts){
+							var jqEle = $(ele);
+							jqEle.data(w.sOptsName,$.extend({},w.defaults,opts));
+							//如果该元素已经执行过了该插件，直接返回，仅相当于修改了配置参数
+							if(jqEle.data(w.sFlagName)){
+								return;
+							}
+							jqEle.data(w.sFlagName,true);
+							w.__creator(ele);
+							jqEle.on(jqEle.data(w.sEventName));
+						};
+						w.unfn = function(ele){
+							w.__destroyer(ele);
+							var jqEle = $(ele);//移除监听事件
+							if(jqEle.data(w.sFlagName)){
+								jqEle.off(jqEle.data(w.sEventName));
+								jqEle.data(w.sFlagName,false);
+							}
+						}
+						
+					}
+					/*
+					 * draggable
+					 * 参数：obj{
+					 * bOffsetParentBoundary:是否以定位父亲元素为边界,
+					 * oBoundary:指定元素left和top的边界值，形如{iMinLeft:...,iMaxLeft:...,iMinTop:...,iMaxTop:...},与上一个参数互斥
+					 * fnComputePosition:扩展函数，返回形如{left:...,top:...}的对象
+					 * }
+					 * 支持的自定义事件:
+					 * "draggable.start":drag起始，就是鼠标down后触发
+					 * "draggable.move":drag过程中多次触发
+					 * "draggable.stop":drag结束触发，就是鼠标up后触发
+					 */
+					//注册draggable组件
+					$.zUI.addWidget("draggable",{
+						defaults:{
+							bOffsetParentBoundary:false,//是否以定位父亲元素为边界
+							oBoundary:null,//边界
+							fnComputePosition:null//计算位置的函数
+						},
+						__creator:function(ele){
+							var jqEle = $(ele);
+							jqEle.data($.zUI.draggable.sEventName,{
+							mousedown:function(ev){
+							var jqThis = $(this);
+							var opts = jqThis.data($.zUI.draggable.sOptsName);
+							
+							jqThis.trigger("draggable.start");
+							var iOffsetX = ev.pageX - this.offsetLeft;
+							var iOffsetY = ev.pageY - this.offsetTop;
+							
+							function fnMouseMove (ev) {
+								var oPos = {};
+								if(opts.fnComputePosition){
+									oPos = opts.fnComputePosition(ev,iOffsetX,iOffsetY);
+								}else{
+									oPos.iLeft = ev.pageX - iOffsetX;
+									oPos.iTop = ev.pageY - iOffsetY;
+								}
+								
+								var oBoundary = opts.oBoundary;
+								if(opts.bOffsetParentBoundary){//如果以offsetParent作为边界
+									var eParent = jqThis.offsetParent()[0];
+									oBoundary = {};
+									oBoundary.iMinLeft = 0;
+									oBoundary.iMinTop = 0;
+									oBoundary.iMaxLeft = eParent.clientWidth - jqThis.outerWidth();
+									oBoundary.iMaxTop = eParent.clientHeight - jqThis.outerHeight();
+								}
+							
+								if(oBoundary){//如果存在oBoundary，将oBoundary作为边界
+									oPos.iLeft = oPos.iLeft < oBoundary.iMinLeft ? oBoundary.iMinLeft : oPos.iLeft;
+									oPos.iLeft = oPos.iLeft > oBoundary.iMaxLeft ? oBoundary.iMaxLeft : oPos.iLeft;
+									oPos.iTop = oPos.iTop < oBoundary.iMinTop ? oBoundary.iMinTop : oPos.iTop;
+									oPos.iTop = oPos.iTop > oBoundary.iMaxTop ? oBoundary.iMaxTop : oPos.iTop;
+								}
+								
+								jqThis.css({left:oPos.iLeft,top:oPos.iTop});
+								ev.preventDefault();
+								jqThis.trigger("draggable.move");
+							}
+							
+							var oEvent = {
+								mousemove:fnMouseMove,
+								mouseup:function(){
+									$(document).off(oEvent);
+									jqThis.trigger("draggable.stop");
+								}
+							};
+							
+							$(document).on(oEvent);
+						}});
+						}
+					});
+					/*
+					 * panel
+					 * 参数：obj{
+					 * 	iWheelStep:鼠标滑轮滚动时步进长度
+					 *	sBoxClassName:滚动框的样式
+					 * 	sBarClassName:滚动条的样式
+					 * }
+					 */
+					$.zUI.addWidget("panel",{
+						defaults : {
+								iWheelStep:16,
+								sBoxClassName:"zUIpanelScrollBox",
+								sBarClassName:"zUIpanelScrollBar"
+						},
+						__creator:function(ele){
+							var jqThis = $(ele);
+							//如果是static定位，加上relative定位
+							if(jqThis.css("position") === "static"){
+								jqThis.css("position","relative");
+							}
+							jqThis.css("overflow","hidden");
+							
+							//必须有一个唯一的直接子元素,给直接子元素加上绝对定位
+							var jqChild = jqThis.children(":first");
+							if(jqChild.length){
+								jqChild.css({top:0,position:"absolute"});
+							}else{
+								return;
+							}
+							
+							var opts = jqThis.data($.zUI.panel.sOptsName);
+							//创建滚动框
+							var jqScrollBox = $("<div style='position:absolute;display:block;line-height:0;'></div>");
+							jqScrollBox.addClass(opts.sBoxClassName);
+							//创建滚动条
+							var jqScrollBar= $("<div style='position:absolute;display:block;line-height:0;'></div>");
+							jqScrollBar.addClass(opts.sBarClassName);
+							jqScrollBox.appendTo(jqThis);
+							jqScrollBar.appendTo(jqThis);
+							
+							opts.iTop = parseInt(jqScrollBox.css("top"));
+							opts.iWidth = jqScrollBar.width();
+							opts.iRight = parseInt(jqScrollBox.css("right"));
+							
+					
+							//添加拖拽触发自定义函数
+							jqScrollBar.on("draggable.move",function(){
+								var opts = jqThis.data($.zUI.panel.sOptsName);
+								fnScrollContent(jqScrollBox,jqScrollBar,jqThis,jqChild,opts.iTop,0);
+							});
+							
+						  //事件对象
+							var oEvent ={
+								mouseenter:function(){
+									
+								},
+								mouseleave:function(){
+									
+								}
+							};
+							
+							var sMouseWheel = "mousewheel";
+							if(!("onmousewheel" in document)){
+								sMouseWheel = "DOMMouseScroll";
+							}
+							oEvent[sMouseWheel] = function(ev){
+								var opts = jqThis.data($.zUI.panel.sOptsName);
+								var iWheelDelta = 1;
+								ev.preventDefault();//阻止默认事件
+								ev = ev.originalEvent;//获取原生的event
+								if(ev.wheelDelta){
+										iWheelDelta = ev.wheelDelta/120;
+								}else{
+										iWheelDelta = -ev.detail/3;
+								}
+								var iMinTop = jqThis.innerHeight() - jqChild.outerHeight();
+								//外面比里面高，不需要响应滚动
+								if(iMinTop>0){
+									jqChild.css("top",0);
+									return;
+								}
+								var iTop = parseInt(jqChild.css("top"));
+								var iTop = iTop + opts.iWheelStep*iWheelDelta;
+								iTop = iTop > 0 ? 0 : iTop;
+								iTop = iTop < iMinTop ? iMinTop : iTop;
+								jqChild.css("top",iTop);
+								fnScrollContent(jqThis,jqChild,jqScrollBox,jqScrollBar,0,opts.iTop);
+							}
+							//记录添加事件
+							jqThis.data($.zUI.panel.sEventName,oEvent);
+							//跟随滚动函数
+							function fnScrollContent(jqWrapper,jqContent,jqFollowWrapper,jqFlollowContent,iOffset1,iOffset2){
+								var opts = jqThis.data($.zUI.panel.sOptsName);
+								var rate = (parseInt(jqContent.css("top"))-iOffset1)/(jqContent.outerHeight()-jqWrapper.innerHeight())//卷起的比率
+								var iTop = (jqFlollowContent.outerHeight()-jqFollowWrapper.innerHeight())*rate + iOffset2;
+								jqFlollowContent.css("top",iTop);
+							}
+						
+							//刷新滚动条
+							
+					
+								var opts = jqThis.data($.zUI.panel.sOptsName);
+								var iScrollBoxHeight = jqThis.innerHeight()-2*opts.iTop;
+								var iRate = jqThis.innerHeight()/jqChild.outerHeight();
+								var iScrollBarHeight = iScrollBarHeight = Math.round(iRate*iScrollBoxHeight);
+								//如果比率大于等于1，不需要滚动条,自然也不需要添加拖拽事件
+								if(iRate >= 1){
+									jqScrollBox.css("height",0);
+									jqScrollBar.css("height",0);
+									return;
+								}
+								jqScrollBox.css("height",iScrollBoxHeight);
+								jqScrollBar.css("height",iScrollBarHeight);
+								//计算拖拽边界，添加拖拽事件
+								var oBoundary = {iMinTop:opts.iTop};
+								oBoundary.iMaxTop = iScrollBoxHeight - Math.round(iRate*iScrollBoxHeight)+opts.iTop;
+								oBoundary.iMinLeft = jqThis.innerWidth() - opts.iWidth - opts.iRight;
+								oBoundary.iMaxLeft = oBoundary.iMinLeft;
+								fnScrollContent(jqThis,jqChild,jqScrollBox,jqScrollBar,0,opts.iTop);
+								jqScrollBar.draggable({oBoundary:oBoundary});
+							
+						},
+							__destroyer:function(ele){
+								var jqEle = $(ele);
+								if(jqEle.data($.zUI.panel.sFlagName)){
+									var opts = jqEle.data($.zUI.panel.sOptsName);
+									jqEle.children("."+opts.sBoxClassName).remove();
+									jqEle.children("."+opts.sBarClassName).remove();
+								}
+						}
+					});
+					
+					$.each($.zUI.asWidget,function(i,widget){
+						unWidget = "un"+widget;
+						var w = {};
+						w[widget] = function(args){
+								this.each(function(){
+								$.zUI[widget].fn(this,args);
+							});
+							return this;
+						};
+						w[unWidget] = function(){
+								this.each(function(){
+								$.zUI[widget].unfn(this);
+							});
+							return this;
+						}
+						$.fn.extend(w);
+					});
+				})(jQuery);
+					
+				</script>
+		<script type="text/javascript">
+                $(function(){
+                    $(".touchbox-textcontent").panel({iWheelStep:32});
+                });
+            </script>
+        <div class="touchbox-textcontent">
+    		<div>
+            	<div class="touch-slide">
+                	<span>国际业务一部（色织面料）</span>
+                    <p>电话：0533-5027828、6027828</p>
+                    <p>邮箱：luthai@lttc.com.cn;Roy.si@lttc.com.cn</p>
+                    <p>联系人：Mr.Mike、Mr.Roy</p>
+                </div>
+                <div class="touch-slide">
+                	<span>国际业务二部（衬衣加工）</span>
+                    <p>电话：0533-5260450、6027866</p>
+                    <p>邮箱：songtingting@lttc.com.cn;</p>
+                    <p>polly@lttc.com.cn; henriatte@lttc.com.cn</p>
+                    <p>联系人：Ms.Rebecca、Ms.Polly、Ms.Henriatte</p>
+                    <p>传真：0533-5261409</p>
+                </div>
+                <div class="touch-slide">
+                	<span>营销部（国内营销业务）</span>
+                    <p>色织面料：</p>
+                    <p>电话：0533-5274466、0533-5265023</p>
+                    <p>电话：0533-5272107</p>
+                    <p>职业装面料：</p>
+                    <p>电话：0533-6027908</p>
+                    <p>现货面料：</p>
+                    <p>电话：0533-5268864</p>
+                </div>
+                <div class="touch-slide">
+                	<span>品牌推广中心</span>
+                    <p>电话：0533-5283001、5418580</p>
+                    <p>传真：0533-5418579</p>
+                    <p>邮箱：ltpp@lttc.com.cn</p>
+                </div>
+                <div class="touch-slide">
+                	<span>极美纺织（美国）公司</span>
+                    <p>面料、衬衣业务</p>
+                    <p>电话:(+1) 646 668 5300</p>
+                </div>
+                <div class="touch-slide">
+                	<span>极美米兰办事处</span>
+                    <p>面料、衬衣设计</p>
+                    <p>电话:+39 02 83 4242 00</p>
+                    <p>客服部</p>
+                    <p>接受国际业务销售人员服务方面的反馈</p>
+                </div>
+            </div>
+    	</div>
+        <div class="touchbox-texttop">
+            <p>邮箱</p>
+            <span>Service@lttc.com.cn</span>
+            <p>联系人</p>
+            <span>Mr Lidexu</span>
+    	</div>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="foot-box">
+    	<div class="foot-copyright">
+        	<img src="../images/index/foot_01.png" width="51" height="39">
+   	  	  	<p>极美服装制衣有限公司<span>Copyright © 2015.company name all rights reserved.<img src="../images/index/foot_02.gif" width="50" height="12"></span></p>
+        </div>
+        <div class="foot-other">
+        	<a href="">==&nbsp;后台管理&nbsp;==</a>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goback">
+  <div class="follow"> <span>关注我们</span>
+    <p><img src="../images/index/go_06.png" width="36" height="37"></p>
+  </div>
+  <div class="custom"> <a href="">在线客服</a> </div>
+  <div class="query"> <a href="">订单<br>
+    查询</a> </div>
+  <script type="text/javascript">
+		$(function(){
+			$(".gotop").click(function(){
+				$("html,body").animate({scrollTop:"0"},500);
+			});
+		})
+	</script>
+  <div class="gotop"> </div>
+</div>
+</body>
+</html>

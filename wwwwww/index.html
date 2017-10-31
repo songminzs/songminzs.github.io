@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<!--导航-->
+	<div class="head">
+    	<div class="msg">
+        	<div class="phone">咨询热线：<span>400-0910-888</span></div>
+            <div class="login"><a href="">登录</a><span>|</span><a href="">注册</a></div>
+        </div>
+        <div class="logo-nav">
+        	<div class="logo">
+            	<img src="images/index/header_02.png">
+            </div>
+            <div class="nav">
+            	<script type="text/javascript">
+					$(function(){
+						$(".nav ul > li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find("ul").slideDown(600);
+							},
+							function(){
+								$(this).find("span").animate({left:"-116px"});
+								$(this).find("ul").slideUp(600);
+							}
+						)
+					})
+				</script>
+            	<ul>
+                	<li><a href="">网站首页<span></span></a></li>
+                    <li><a href="">关于我们<span></span></a>
+                    	<ul>
+                        	<li><a href="">荣誉资质</a></li>
+                            <li><a href="">企业文化</a></li>
+                            <li><a href="">企业实力</a></li>
+                            <li><a href="">大事记</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">产品服务<span></span></a>
+                    	<ul>
+                        	<li><a href="">职业装</a></li>
+                            <li><a href="">羽绒服</a></li>
+                            <li><a href="">毛呢外套</a></li>
+                            <li><a href="">针织毛衣</a></li>
+                            <li><a href="">风衣</a></li>
+                            <li><a href="">卫衣</a></li>
+                            <li><a href="">T恤</a></li>
+                            <li><a href="">连衣裙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">制衣流程<span></span></a></li>
+                    <li><a href="">新闻资讯<span></span></a>
+                    	<ul>
+                        	<li><a href="">公司新闻</a></li>
+                            <li><a href="">订单动态</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">服务中心<span></span></a>
+                    	<ul>
+                        	<li><a href="">在线订单</a></li>
+                            <li><a href="">营销网络</a></li>
+                            <li><a href="">在线留言</a></li>
+                            <li><a href="">留言列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">合作伙伴<span></span></a></li>
+                    <li><a href="">联系我们<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图滚动-->
+    <div class="slide">
+    	<div class="search-box">
+        	<div class="search-boxwrap">
+                <div class="order-search">
+                    <p>订单查询</p>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="text" placeholder="请输入订单号">
+                            <input type="submit" class="search-detail" value="搜索">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-form input[type=text]").focus(
+                            function(){
+                                $(".order-about").slideDown();
+                                $(this).animate({height:"90px"}).addClass("inputfocus");
+                                $(".search-form .search-detail").addClass("btnfocus");
+                            }
+                        );
+                        $(".search-boxwrap").mouseenter(function(){
+                            
+                        }).mouseleave(function(){
+                            $(".order-about").slideUp();
+                            $(".search-form input[type=text]").animate({height:"30px"}).removeClass("inputfocus").blur();
+                            $(".search-form .search-detail").removeClass("btnfocus");
+                        });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-detail").click(function(){
+                            if($(".search-form input[type=text]").val() == ""){
+                                return false;
+                            }
+                        });
+                    })
+                </script>
+                <div class="order-about">
+                    <div class="line-order">
+                        <a href=""><em>新</em>在线下单<span>急速下单，无需等待!</span></a>
+                    </div>
+                    <div class="custom">
+                        <p>客服热线<span>400-0910-888</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-slide">
+        	<script type="text/javascript">
+			$(function(){
+				var isPagerClick=false,		//判断底下的小按钮
+					isPrevClick=false,		//判断左右滑动的按钮
+					index=0,	//目标值
+					pre=0,
+					handid;
+				start();
+				function start(){
+					init();	//初始化函数
+					$(".car-img li").eq(0).fadeIn().siblings().fadeOut();
+					handid = setInterval(play,2000);	//轮播
+				}
+				function init(){
+					$(".car-btn li").bind("click",pagerClick);	//给小按钮绑定点击事件
+					$(".nav-btn span").bind("click",btnClick);//给左右按钮绑定点击事件
+					$(".nav-btn span").hover(btnMouseOver,btnMouseOut);
+				}
+				function pagerClick(){		//小按钮的点击事件
+					isPagerClick=true;		//已经点击
+					clearInterval(handid);	//消除setInterval
+					var oPager=$(this).index();	//获取点击按钮的索引值
+					if(oPager != pre)	//判断点击按钮的位置
+					{
+						index=oPager - 1;	
+						play();
+					}
+				}
+				function btnClick(){
+					if($(this).hasClass("nav-prev")){ //判断点击按钮的 左 或者是 右
+						isPrevClick=true;
+						clearInterval(handid);
+						if(index==0 || index==1)
+						{
+							if(index==0){index=$(".car-img li").length-2;}
+							else{index=$(".car-img li").length-1;}
+						}else
+						{
+							index-=2;
+						}
+						play();
+					}
+					else{
+						isPrevClick=true;
+						clearInterval(handid);
+						play();
+					}
+				}
+				function btnMouseOver(){
+					$(this).addClass("btnhover");
+				}
+				function btnMouseOut(){
+					$(this).removeClass("btnhover");
+				}
+				function play(){
+					index++;
+					if(index == $(".car-img li").length)
+					{
+						index = 0;
+					}
+					$(".car-img li").eq(pre).fadeOut(200,function(){
+						$(".car-img li").eq(index).fadeIn(500,function(){
+							if(isPagerClick)	//判断是否点击了
+							{
+								handid=setInterval(play,2000);	//重新设置setInterval
+								isPagerClick=false;
+							};
+							if(isPrevClick)
+							{	
+								handid=setInterval(play,2000);
+								isPrevClick=false;
+							}
+						}).siblings().fadeOut();
+						$(".car-btn li").eq(index).addClass("car-btn-hover");
+						$(".car-btn li").eq(pre).removeClass("car-btn-hover");
+						pre=index;
+					});
+				}
+			})
+			</script>
+        	<ul class="car-img">
+            	<li><img src="images/index/slide_02.png"></li>
+                <li><img src="images/index/slide_01.png"></li>
+                <li><img src="images/index/slide_05.png"></li>
+                <li><img src="images/index/slide_04.png"></li>
+                <li><img src="images/index/slide_03.png"></li>
+            </ul>
+            <div class="nav-btn">
+            	<span class="nav-prev"><</span>
+        		<span class="nav-next">></span>
+            </div>
+            <div class="car-btnbtn">
+                <ul class="car-btn">
+                    <li class="car-btn-hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+</div>
+<!--内容-->
+<div class="content">
+	<!--公司简介-->
+	<div class="about-box">
+    	<div class="about-wrapbox">
+        	<script type="text/javascript">
+				
+			</script>
+    		<div class="about-img">
+                <img src="images/index/about_01.png" width="492" height="312">
+            </div>
+            <div class="about-text">
+            	<p class="p_first"><span>公司简介/</span>ABOUT GIOME</p>
+                <p class="p_second"> 极美服装制衣有限公司坐落北京市繁华都市,闵行区纪王镇，环境优美、交通便利，是一家专业从事服装辅料研发，设计，生产、和服务的综合型企业。主要产品有：滴塑、注塑、毛毡、矽利康、PVC环保标系列、真皮仿皮烙印系列、面料特种印花、压花标系列、高周波电压标系列、充气羽绒吊牌标系列、反光标系列、织带滴胶系列、扎线拉头系列、魔术贴袖袢系列、工艺礼品系列、注塑配件系列等各种服装辅料制品。</p>
+                <a href="" class="about-detail">查看详情</a>
+            </div>
+        </div>
+  </div>
+  	<!--企业实力-->
+    <div class="strength-box">
+    	<div class="strength-wrapbox">
+        	<p><span>企业实力/</span>POWER OF GIOME</p>
+            <div class="step-box">
+            	<ul>
+                	<li><p class="step-pfirst">生产加工能力强<span>Manufacturing capability</span></p>
+                    <p class="step-psecond"><img src="images/index/strength_01.png" /></p></li>
+                    <li><p class="step-pfirst">按图生产，质量有保证<span>Quality assuranse</span></p>
+                    <p class="step-psecond"><img src="images/index/strength_02.png" /></p></li>
+					<li><p class="step-pfirst">合理规范化生产，按时交货<span>Standard production,On the time delivery</span></p>
+                    <p class="step-psecond"><img src="images/index/strength_03.png" /></p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="classify-box">
+            	<div class="calssiify-nav">
+                	<script type="text/javascript">
+						$(function(){
+							$(".calssiify-nav ul li").click(function(){
+								var index=$(this).index();
+								$(this).addClass("calssiify-navhover").siblings().removeClass("calssiify-navhover");
+								$(".classify-class").eq(index-1).addClass("classify-display").siblings().removeClass("classify-display");
+							});
+						})
+					</script>
+                	<ul>
+                        <li class="calssiify-navhover">职业装</li>
+                        <li>羽绒服</li>
+                        <li>毛呢外套</li>
+                        <li>针织毛衣</li>
+                        <li>风衣</li>
+                        <li>卫衣</li>
+                        <li>T恤</li>
+                        <li>连衣裙</li>
+                    </ul>
+                </div>
+                <div class="classify-content">
+                	<div class="classify-class classify-display">
+                		<ul>
+                        	<li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊11</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                        	
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊22</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊33</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊44</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊55</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                        	
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊22</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊33</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                    <div class="classify-class">
+                		<ul>
+                            <li><img src="images/index/classify_04.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_05.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_01.png"><a href=""><span>职业装啊啊44</span></a></li>
+                            <li><img src="images/index/classify_02.png"><a href=""><span>职业装啊啊</span></a></li>
+                            <li><img src="images/index/classify_03.png"><a href=""><span>职业装啊啊</span></a></li>
+                        </ul>
+                	</div>
+                </div>
+       </div>
+    </div>
+    <!--制衣流程-->
+    <div class="garment-box">
+    	<div class="garment-wrapbox">
+        	<p><span>制衣流程/</span>GARMENT PROCESS</p>
+            <p class="gar-summary">极美公司坚持以传统手工艺和新兴技术相结合，保证每一件产品都是最用心的设计。让您的每一次选择都倍感满足。</p>
+            <ul>
+            	<script type="text/javascript">
+					$(function(){
+						$(".garment-wrapbox ul li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find(".stren-img").animate({left:"-93px"});
+							},
+							function(){
+								$(this).find("span").animate({left:"-93px"});
+								$(this).find(".stren-img").animate({left:"0px"});
+							}
+						);
+					})
+				</script>
+            	<li><p><span><img src="images/index/gar_02.png" width="93" height="93"></span><img class="stren-img" src="images/index/gar_01.png" width="93" height="93"></p>
+           	    接单</li>
+                <li><p><span><img src="images/index/gar_04.png" width="93" height="93"></span><img class="stren-img" src="images/index/gar_03.png" width="93" height="93"></p>打样</li>
+                <li><p><span><img src="images/index/gar_06.png" width="93" height="93"></span><img class="stren-img" src="images/index/gar_05.png" width="93" height="93"></p>裁剪</li>
+                <li><p><span><img src="images/index/gar_08.png" width="93" height="93"></span><img class="stren-img" img src="images/index/gar_07.png" width="93" height="93"></p>后整</li>
+                <li><p><span><img src="images/index/gar_10.png" width="93" height="93"></span><img class="stren-img"  src="images/index/gar_09.png" width="93" height="93"></p>包装</li>
+                <li><p><span><img src="images/index/gar_12.png" width="93" height="93"></span><img class="stren-img" src="images/index/gar_11.png" width="93" height="93"></p>检验</li>
+                <li><p><span><img src="images/index/gar_14.png" width="93" height="93"></span><img class="stren-img" src="images/index/gar_13.png" width="93" height="93"></p>出货</li>
+            </ul>
+        </div>
+    </div>
+    <!--企业新闻-->
+    <div class="news-box">
+   	  <div class="news-wrapbox">
+       	<p><span>企业新闻/</span>GIOME NEWS</p>
+          <ul>
+           	  <li><img src="images/index/news_01.png" width="278" height="355"><a href=""></a><p>我公司顺利通过在线生产监控及管控集成试点项目验收</p></li>
+              <li><img src="images/index/news_02.png" width="278" height="355"><a href=""></a><p>"纺织之光"重点科技成果现场推广活动参会代表参观我公司</p></li>
+              <li><img src="images/index/news_03.png" width="278" height="355"><a href=""></a><p>
+
+公司时装表演队赴新疆极美慰问演出
+</p></li>
+              <li><img src="images/index/news_04.png" width="278" height="355"><a href=""></a><p>公司顺利通过在线生产监控及管控集成试点项目验收</p></li>
+          </ul>
+		</div>
+	</div>
+    <!--订单动态-->
+    <div class="order-box">
+   	  <div class="order-wrapbox">
+       	<p><span>订单动态/</span>ORDER DYNAMICS</p>
+          <ul>
+           	  <li><a href="" class="order-afirst"><img src="images/index/order_01.png"></a><p>GM10092015-中企动力CE·O年会制服-200件</p><a href="" class="order-detail">查看详情</a></li>
+              <li><a href="" class="order-afirst"><img src="images/index/order_02.png"></a><p>GM10092014-大地影院年会T恤-2500件</p><a href="" class="order-detail">查看详情</a></li>
+              <li><a href="" class="order-afirst"><img src="images/index/order_03.png"></a><p>GM10092014-新网圣诞节文化衫-200件</p><a href="" class="order-detail">查看详情</a></li>
+          </ul>
+		</div>
+	</div>
+    <!--合作伙伴-->
+    <div class="partner-box">
+   	  <div class="partner-wrapbox">
+       	<p><span>合作伙伴/</span>COOPERATIVE PARTNER</p>
+          <ul>
+           	  <li><p><img src="images/index/partner_01.png" width="83" height="51"></p>
+       	      <span>puma 彪马</span></li>
+              <li><p><img src="images/index/partner_02.png" width="83" height="51"></p>
+       	      <span>nike 耐克</span></li>
+              <li><p><img src="images/index/partner_03.png" width="83" height="51"></p>
+       	      <span>li-ning 李宁</span></li>
+              <li><p><img src="images/index/partner_04.png" width="83" height="51"></p>
+       	      <span>bosideng 波司登</span></li>
+              <li><p><img src="images/index/partner_05.png" width="83" height="51"></p>
+       	      <span>卡文克莱</span></li>
+              <li><p><img src="images/index/partner_06.png" width="83" height="51"></p>
+       	      <span>Hennes&Mauritz</span></li>
+              <li><p><img src="images/index/partner_07.png" width="83" height="51"></p>
+       	      <span>SPRIT</span></li>
+          </ul>
+		</div>
+	</div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="foot-box">
+    	<div class="foot-copyright">
+        	<img src="images/index/foot_01.png" width="51" height="39">
+   	  	  	<p>极美服装制衣有限公司<span>Copyright © 2015.company name all rights reserved.<img src="images/index/foot_02.gif" width="50" height="12"></span></p>
+        </div>
+        <div class="foot-other">
+        	<a href="">==&nbsp;后台管理&nbsp;==</a>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goback">
+	<div class="follow">
+    	<span>关注我们</span>
+    	<p><img src="images/index/go_06.png" width="36" height="37"></p> 
+    </div>
+  	<div class="custom">
+    	<a href="">在线客服</a>
+  	</div>
+  	<div class="query">
+    	<a href="">订单<br>查询</a>
+    </div>
+    <script type="text/javascript">
+		$(function(){
+			$(".gotop").click(function(){
+				$("html,body").animate({scrollTop:"0"},500);
+			});
+		})
+	</script>
+  	<div class="gotop">
+    </div>
+</div>
+</body>
+</html>

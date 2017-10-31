@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站-登录</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	$(function(){
+		$("#send").click(function(){
+			if($("form input[type='text']").val()=="" || $("form input[type='password']").val()==""){
+				return false;
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<div class="loginbox">
+    	<p><img src="../images/index/header_02.png" width="260" height="90"></p>
+    </div>
+<div class="loginbox-form">
+    	<form action="">
+        	<p><input type="text" placeholder="请输入账号"><span>您输入的账号错误</span></p>
+            <p><input type="password" placeholder="请输入密码"><span>您输入的密码错误</span></p>
+            <p><input type="submit" value="登  录" id="send"></p>
+        </form>
+    	<p class="loginbox-text">还没有集美帐号?<a href="">立即注册</a><span>&rarr;</span></p>
+  </div>
+    <p class="login-copy">— 集美制衣有限公司 —</p>
+</body>
+</html>

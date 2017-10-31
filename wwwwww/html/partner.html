@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站-合作伙伴</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<!--导航-->
+	<div class="head">
+    	<div class="msg">
+        	<div class="phone">咨询热线：<span>400-0910-888</span></div>
+            <div class="login"><a href="">登录</a><span>|</span><a href="">注册</a></div>
+        </div>
+        <div class="logo-nav">
+        	<div class="logo">
+            	<img src="../images/index/header_02.png">
+            </div>
+            <div class="nav">
+            	<script type="text/javascript">
+					$(function(){
+						$(".nav ul > li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find("ul").slideDown(600);
+							},
+							function(){
+								$(this).find("span").animate({left:"-116px"});
+								$(this).find("ul").slideUp(600);
+							}
+						)
+					})
+				</script>
+            	<ul>
+                	<li><a href="">网站首页<span></span></a></li>
+                    <li><a href="">关于我们<span></span></a>
+                    	<ul>
+                        	<li><a href="">荣誉资质</a></li>
+                            <li><a href="">企业文化</a></li>
+                            <li><a href="">企业实力</a></li>
+                            <li><a href="">大事记</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">产品服务<span></span></a>
+                    	<ul>
+                        	<li><a href="">职业装</a></li>
+                            <li><a href="">羽绒服</a></li>
+                            <li><a href="">毛呢外套</a></li>
+                            <li><a href="">针织毛衣</a></li>
+                            <li><a href="">风衣</a></li>
+                            <li><a href="">卫衣</a></li>
+                            <li><a href="">T恤</a></li>
+                            <li><a href="">连衣裙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">制衣流程<span></span></a></li>
+                    <li><a href="">新闻资讯<span></span></a>
+                    	<ul>
+                        	<li><a href="">公司新闻</a></li>
+                            <li><a href="">订单动态</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">服务中心<span></span></a>
+                    	<ul>
+                        	<li><a href="">在线订单</a></li>
+                            <li><a href="">营销网络</a></li>
+                            <li><a href="">在线留言</a></li>
+                            <li><a href="">留言列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">合作伙伴<span></span></a></li>
+                    <li><a href="">联系我们<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图滚动-->
+    <div class="slide">
+    	<div class="search-box">
+        	<div class="search-boxwrap">
+                <div class="order-search">
+                    <p>订单查询</p>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="text" placeholder="请输入订单号">
+                            <input type="submit" class="search-detail" value="搜索">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-form input[type=text]").focus(
+                            function(){
+                                $(".order-about").slideDown();
+                                $(this).animate({height:"90px"}).addClass("inputfocus");
+                                $(".search-form .search-detail").addClass("btnfocus");
+                            }
+                        );
+                        $(".search-boxwrap").mouseenter(function(){
+                            
+                        }).mouseleave(function(){
+                            $(".order-about").slideUp();
+                            $(".search-form input[type=text]").animate({height:"30px"}).removeClass("inputfocus").blur();
+                            $(".search-form .search-detail").removeClass("btnfocus");
+                        });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-detail").click(function(){
+                            if($(".search-form input[type=text]").val() == ""){
+                                return false;
+                            }
+                        });
+                    })
+                </script>
+                <div class="order-about">
+                    <div class="line-order">
+                        <a href=""><em>新</em>在线下单<span>急速下单，无需等待!</span></a>
+                    </div>
+                    <div class="custom">
+                        <p>客服热线<span>400-0910-888</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-slide">
+        	<script type="text/javascript">
+			$(function(){
+				var isPagerClick=false,		//判断底下的小按钮
+					isPrevClick=false,		//判断左右滑动的按钮
+					index=0,	//目标值
+					pre=0,
+					handid;
+				start();
+				function start(){
+					init();	//初始化函数
+					$(".car-img li").eq(0).fadeIn().siblings().fadeOut();
+					handid = setInterval(play,2000);	//轮播
+				}
+				function init(){
+					$(".car-btn li").bind("click",pagerClick);	//给小按钮绑定点击事件
+					$(".nav-btn span").bind("click",btnClick);//给左右按钮绑定点击事件
+					$(".nav-btn span").hover(btnMouseOver,btnMouseOut);
+				}
+				function pagerClick(){		//小按钮的点击事件
+					isPagerClick=true;		//已经点击
+					clearInterval(handid);	//消除setInterval
+					var oPager=$(this).index();	//获取点击按钮的索引值
+					if(oPager != pre)	//判断点击按钮的位置
+					{
+						index=oPager - 1;	
+						play();
+					}
+				}
+				function btnClick(){
+					if($(this).hasClass("nav-prev")){ //判断点击按钮的 左 或者是 右
+						isPrevClick=true;
+						clearInterval(handid);
+						if(index==0 || index==1)
+						{
+							if(index==0){index=$(".car-img li").length-2;}
+							else{index=$(".car-img li").length-1;}
+						}else
+						{
+							index-=2;
+						}
+						play();
+					}
+					else{
+						isPrevClick=true;
+						clearInterval(handid);
+						play();
+					}
+				}
+				function btnMouseOver(){
+					$(this).addClass("btnhover");
+				}
+				function btnMouseOut(){
+					$(this).removeClass("btnhover");
+				}
+				function play(){
+					index++;
+					if(index == $(".car-img li").length)
+					{
+						index = 0;
+					}
+					$(".car-img li").eq(pre).fadeOut(200,function(){
+						$(".car-img li").eq(index).fadeIn(500,function(){
+							if(isPagerClick)	//判断是否点击了
+							{
+								handid=setInterval(play,2000);	//重新设置setInterval
+								isPagerClick=false;
+							};
+							if(isPrevClick)
+							{	
+								handid=setInterval(play,2000);
+								isPrevClick=false;
+							}
+						}).siblings().fadeOut();
+						$(".car-btn li").eq(index).addClass("car-btn-hover");
+						$(".car-btn li").eq(pre).removeClass("car-btn-hover");
+						pre=index;
+					});
+				}
+			})
+			</script>
+        	<ul class="car-img">
+            	<li><img src="../images/index/slide_02.png"></li>
+                <li><img src="../images/index/slide_01.png"></li>
+                <li><img src="../images/index/slide_05.png"></li>
+                <li><img src="../images/index/slide_04.png"></li>
+                <li><img src="../images/index/slide_03.png"></li>
+            </ul>
+            <div class="nav-btn">
+            	<span class="nav-prev"><</span>
+        		<span class="nav-next">></span>
+            </div>
+            <div class="car-btnbtn">
+                <ul class="car-btn">
+                    <li class="car-btn-hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+</div>
+<!--内容-->
+<div class="about-content">
+	<div class="about-profilebox">
+    	<span>合作伙伴</span>
+        <p><a href="">首页&nbsp;>&nbsp;</a><span>合作伙伴</span></p>
+    </div>
+	<div class="about-summary">
+    	<p>集美长期合作伙伴</p>
+        <div class="partnerbox">
+        	<div class="partnerbox-List">
+            	<ul>
+                	<script type="text/javascript">
+						$(function(){
+							$(".partnerbox-img").hover(function(){
+								$(this).next().show(400);
+							},function(){
+								$(this).next().hide(400);
+							})
+						})
+					</script>
+                	<li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_01.png)"></b>
+                            <span style="background-image:url(../images/about/par_02.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>提出全新品牌口号Forever Faster的德国运动品牌PUMA(彪马),与顶尖运动员紧密合作,设计提供专业运动装备,产品涉及跑步,足球,高尔夫乃至赛车领域。</p>
+                        </div>
+                        <p>puma 彪马</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_03.png)"></b>
+                            <span style="background-image:url(../images/about/par_04.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>李宁公司是中国家喻户晓的"体操王子"李宁先生在1990年创立的体育用品公司。</p>
+                        </div>
+                        <p>li-ning 李宁</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_05.png)"></b>
+                            <span style="background-image:url(../images/about/par_06.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>NIKE是全球著名的体育运动品牌，英文原意指希腊胜利女神，中文译为耐克。公司总部位于美国俄勒冈州Beaverton。</p>
+                        </div>
+                        <p>nike 耐克</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_07.png)"></b>
+                            <span style="background-image:url(../images/about/par_08.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext" style="width:120px;">
+                        	<p>主要经营销售服装和化妆品。</p>
+                        </div>
+                        <p>Hennes&amp;Mauritz</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_09.png)"></b>
+                            <span style="background-image:url(../images/about/par_10.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>ESPRIT其"在乎心态而非年龄"的设计理念已传遍全球。ESPRIT 代表着一个充满干劲、推崇合作、追求理想，以及对生命积极乐观的时尚生活品牌。</p>
+                        </div>
+                        <p>esprit 思捷</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_11.png)"></b>
+                            <span style="background-image:url(../images/about/par_12.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>波司登是全国最大、生产设备最为先进的品牌羽绒服生产商，主要从事自有羽绒服品牌的开发和管理，包括产品的研究、设计、开发、原材料采购、外包生产及市场营销和销售。</p>
+                        </div>
+                        <p>bosideng 波司登</p>
+                    </li>
+                    <li>
+                    	<div class="partnerbox-img">
+                        	<b style="background-image:url(../images/about/par_13.png)"></b>
+                            <span style="background-image:url(../images/about/par_14.png)">
+                            </span>
+                        </div>
+                        <div class="partnerbox-imgtext">
+                        	<p>Calvin Klein（简称：CK），是一个美国时装品牌，于1968年成立，创始者为同名设计师卡尔文·克莱恩，曾经连续四度获得知名的服装奖项。</p>
+                        </div>
+                        <p>calvin klein 卡文克莱</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="partnerbox-content">
+            	<p style="font-weight:bold;">本公司争取与其主要客户建立长久的伙伴关系。本集团坚守以客为本的文化，在客户需求不断增加的情况下，致力为客户提供灵活性，迅速响应需求。</p>
+                <p>为协助客户适应市场的转变，本集团推行的销售及市场推广策略重点，在于为客户提供以下针织服装供应链内各种服务：</p>
+                <ol>
+                	<li>1.切合客户个别需要的面料；</li>
+                    <li>2.染整服务；</li>
+                    <li>3.印绣服务；</li>
+                    <li>4.裁剪与缝纫；</li>
+                    <li>5.包装及物流。</li>
+                </ol>
+                <p>并非所有客户均要求本公司提供上述全部服务，但董事相信，具备提供该等纵向服务的能力，对于使本集团能从竞争对手中脱颖而出，<span>迎合客户不断转变的需求，实在十分重要。</span></p>
+                <p style="margin:20px 0;">本公司在香港、上海设有销售办事处，另于日本设有驻外代表办事处以处理出口销售。董事相信，在客户邻近地区派驻销售代表，使公司可及早对市场变化及客户的需求作出响应。销售队伍的其中一项重点工作，是及早了解本公司客户对每个新季度开季时的新款设计及意念建议。在每季开始前，均会与主要客户举行业务会议，从而制订下一季度的生产与销售计划，借着这些资料，销售队伍可向客户建议采用若干面料、配饰、水洗效果、印花技术或设计，以配合客户的特殊设计及面料要求及生产预算。<span>本公司矢志满足客户的要求，并能适时有效率地生产时装。</span></p>
+                <p>本公司定时邀请客户到访本集团的生产设施，以便更深入了解本公司的生产方法、质量控制机制、研发实力及雇员待遇标准。另外，本公司还参与展销会(尤其在中国举行)，以进一步推广本公司的新产品，且更特别以欧美市场作为销售目标。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="foot-box">
+    	<div class="foot-copyright">
+        	<img src="../images/index/foot_01.png" width="51" height="39">
+   	  	  	<p>极美服装制衣有限公司<span>Copyright © 2015.company name all rights reserved.<img src="../images/index/foot_02.gif" width="50" height="12"></span></p>
+        </div>
+        <div class="foot-other">
+        	<a href="">==&nbsp;后台管理&nbsp;==</a>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goback">
+	<div class="follow">
+    	<span>关注我们</span>
+    	<p><img src="../images/index/go_06.png" width="36" height="37"></p> 
+    </div>
+  	<div class="custom">
+    	<a href="">在线客服</a>
+  	</div>
+  	<div class="query">
+    	<a href="">订单<br>查询</a>
+    </div>
+    <script type="text/javascript">
+		$(function(){
+			$(".gotop").click(function(){
+				$("html,body").animate({scrollTop:"0"},500);
+			});
+		})
+	</script>
+  	<div class="gotop">
+    </div>
+</div>
+</body>
+</html>

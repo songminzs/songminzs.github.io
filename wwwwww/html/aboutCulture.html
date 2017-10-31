@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>集美制衣网站-企业文化</title>
+<meta name="keywords" content="集美女装,引领时尚潮流,信息化专家,设计灵感" />
+<meta name="description" content="北京集美制衣有限公司是一家集专业设计、生产和销售于一体的现代化女装企业。自2002年成立推出注册品牌以来，一直致力于引领都市知识女性的时尚穿衣品味；崇尚个性化、多元化搭配而又不失经典的着装理念和服饰文化；倾情塑造端庄、知性、优雅的美好女性形象。" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<!--导航-->
+	<div class="head">
+    	<div class="msg">
+        	<div class="phone">咨询热线：<span>400-0910-888</span></div>
+            <div class="login"><a href="">登录</a><span>|</span><a href="">注册</a></div>
+        </div>
+        <div class="logo-nav">
+        	<div class="logo">
+            	<img src="../images/index/header_02.png">
+            </div>
+            <div class="nav">
+            	<script type="text/javascript">
+					$(function(){
+						$(".nav ul > li").hover(
+							function(){
+								$(this).find("span").animate({left:"0px"});
+								$(this).find("ul").slideDown(600);
+							},
+							function(){
+								$(this).find("span").animate({left:"-116px"});
+								$(this).find("ul").slideUp(600);
+							}
+						)
+					})
+				</script>
+            	<ul>
+                	<li><a href="">网站首页<span></span></a></li>
+                    <li><a href="">关于我们<span></span></a>
+                    	<ul>
+                        	<li><a href="">荣誉资质</a></li>
+                            <li><a href="">企业文化</a></li>
+                            <li><a href="">企业实力</a></li>
+                            <li><a href="">大事记</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">产品服务<span></span></a>
+                    	<ul>
+                        	<li><a href="">职业装</a></li>
+                            <li><a href="">羽绒服</a></li>
+                            <li><a href="">毛呢外套</a></li>
+                            <li><a href="">针织毛衣</a></li>
+                            <li><a href="">风衣</a></li>
+                            <li><a href="">卫衣</a></li>
+                            <li><a href="">T恤</a></li>
+                            <li><a href="">连衣裙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">制衣流程<span></span></a></li>
+                    <li><a href="">新闻资讯<span></span></a>
+                    	<ul>
+                        	<li><a href="">公司新闻</a></li>
+                            <li><a href="">订单动态</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">服务中心<span></span></a>
+                    	<ul>
+                        	<li><a href="">在线订单</a></li>
+                            <li><a href="">营销网络</a></li>
+                            <li><a href="">在线留言</a></li>
+                            <li><a href="">留言列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">合作伙伴<span></span></a></li>
+                    <li><a href="">联系我们<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图滚动-->
+    <div class="slide">
+    	<div class="search-box">
+        	<div class="search-boxwrap">
+                <div class="order-search">
+                    <p>订单查询</p>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="text" placeholder="请输入订单号">
+                            <input type="submit" class="search-detail" value="搜索">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-form input[type=text]").focus(
+                            function(){
+                                $(".order-about").slideDown();
+                                $(this).animate({height:"90px"}).addClass("inputfocus");
+                                $(".search-form .search-detail").addClass("btnfocus");
+                            }
+                        );
+                        $(".search-boxwrap").mouseenter(function(){
+                            
+                        }).mouseleave(function(){
+                            $(".order-about").slideUp();
+                            $(".search-form input[type=text]").animate({height:"30px"}).removeClass("inputfocus").blur();
+                            $(".search-form .search-detail").removeClass("btnfocus");
+                        });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function(){
+                        $(".search-detail").click(function(){
+                            if($(".search-form input[type=text]").val() == ""){
+                                return false;
+                            }
+                        });
+                    })
+                </script>
+                <div class="order-about">
+                    <div class="line-order">
+                        <a href=""><em>新</em>在线下单<span>急速下单，无需等待!</span></a>
+                    </div>
+                    <div class="custom">
+                        <p>客服热线<span>400-0910-888</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-slide">
+        	<script type="text/javascript">
+			$(function(){
+				var isPagerClick=false,		//判断底下的小按钮
+					isPrevClick=false,		//判断左右滑动的按钮
+					index=0,	//目标值
+					pre=0,
+					handid;
+				start();
+				function start(){
+					init();	//初始化函数
+					$(".car-img li").eq(0).fadeIn().siblings().fadeOut();
+					handid = setInterval(play,2000);	//轮播
+				}
+				function init(){
+					$(".car-btn li").bind("click",pagerClick);	//给小按钮绑定点击事件
+					$(".nav-btn span").bind("click",btnClick);//给左右按钮绑定点击事件
+					$(".nav-btn span").hover(btnMouseOver,btnMouseOut);
+				}
+				function pagerClick(){		//小按钮的点击事件
+					isPagerClick=true;		//已经点击
+					clearInterval(handid);	//消除setInterval
+					var oPager=$(this).index();	//获取点击按钮的索引值
+					if(oPager != pre)	//判断点击按钮的位置
+					{
+						index=oPager - 1;	
+						play();
+					}
+				}
+				function btnClick(){
+					if($(this).hasClass("nav-prev")){ //判断点击按钮的 左 或者是 右
+						isPrevClick=true;
+						clearInterval(handid);
+						if(index==0 || index==1)
+						{
+							if(index==0){index=$(".car-img li").length-2;}
+							else{index=$(".car-img li").length-1;}
+						}else
+						{
+							index-=2;
+						}
+						play();
+					}
+					else{
+						isPrevClick=true;
+						clearInterval(handid);
+						play();
+					}
+				}
+				function btnMouseOver(){
+					$(this).addClass("btnhover");
+				}
+				function btnMouseOut(){
+					$(this).removeClass("btnhover");
+				}
+				function play(){
+					index++;
+					if(index == $(".car-img li").length)
+					{
+						index = 0;
+					}
+					$(".car-img li").eq(pre).fadeOut(200,function(){
+						$(".car-img li").eq(index).fadeIn(500,function(){
+							if(isPagerClick)	//判断是否点击了
+							{
+								handid=setInterval(play,2000);	//重新设置setInterval
+								isPagerClick=false;
+							};
+							if(isPrevClick)
+							{	
+								handid=setInterval(play,2000);
+								isPrevClick=false;
+							}
+						}).siblings().fadeOut();
+						$(".car-btn li").eq(index).addClass("car-btn-hover");
+						$(".car-btn li").eq(pre).removeClass("car-btn-hover");
+						pre=index;
+					});
+				}
+			})
+			</script>
+        	<ul class="car-img">
+            	<li><img src="../images/index/slide_02.png"></li>
+                <li><img src="../images/index/slide_01.png"></li>
+                <li><img src="../images/index/slide_05.png"></li>
+                <li><img src="../images/index/slide_04.png"></li>
+                <li><img src="../images/index/slide_03.png"></li>
+            </ul>
+            <div class="nav-btn">
+            	<span class="nav-prev"><</span>
+        		<span class="nav-next">></span>
+            </div>
+            <div class="car-btnbtn">
+                <ul class="car-btn">
+                    <li class="car-btn-hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+</div>
+<!--内容-->
+<div class="about-content">
+	<div class="about-profilebox">
+    	<span>企业文化</span>
+        <p><a href="">首页&nbsp;>&nbsp;</a><a href="">关于我们&nbsp;>&nbsp;</a><span>企业文化</span></p>
+    </div>
+	<div class="culturebox">
+   	  	<h3>永不止步，永远向前</h3>
+  		<p>在考验和挑战中，极美走过了二十多年的风雨历程，由默默无闻的棉纺小厂发展成为具有棉花种植、纺纱、漂染、织布、整理、制衣综合垂直生产能力的企业集团。极美在各界的支持中建立、壮大、发展。有这种支持在，极美不会停止前进的脚步，也唯有用不懈的努力来报答。</p>
+        <div class="culture-ask">
+   	  		<img src="../images/about/about_05.png" width="260" height="390">
+            <ul>
+            	<li><h4>开拓进取是极美的主旨</h4><p>极美从不认为工作已做的最好，但有决心把工作做的更好。用最好的原料、最好的设备、最好的技术、生产最好的产品，取得最好的效益是极美最大的目标。</p></li>
+                <li><h4>科学管理是极美的追求</h4><p>企业的竞争就是管理的竞争，企业的成功也是管理的成功。极美在引进国外资金、国外设备、国外技术，产品销往国外，获得外汇收入的同时，所致力的便是汲取外国先进的管理经验，结合自身实际形成自己科学、规范、高效的管理特色。</p></li>
+                <li><h4>踏实苦干是极美的精神</h4><p>功崇惟志，业广惟勤。极美人笃信用心血和汗水能够铸造事业的辉煌，世界在改变，市场在变，但伴着极美走过漫长道路的这种精神永远不会改变。不进则退的危机意识、爱厂如家的责任意识凝聚成的这种精神，是极美最为宝贵的财富。</p></li>
+                <li><h4>诚实守信是极美的原则</h4><p>在市场竞争中，人们在表现自己的能力，也在展示自己的品德，极美就是要用产品的高质量，良好的信誉和完善的服务，向所有的朋友展示我们的道德风貌：做不到的绝对不说，说了的一定做到。</p></li>
+            </ul>
+        </div>
+        <div class="culture-idea">
+        	<h5>企业理念</h5>
+            <p>秉持"诚信经营，品质第一"的务实理念，热枕欢迎国内外从事服装生意和服装需求的客户与公司洽谈，本公司愿交天下朋友，并且建立长久的互惠互利的商贸关系，寻求共同发展。"您的满意是我们的责任"是我们不变的承诺，"成为您最贴心最可靠的朋友，共同成长，互惠互利"是我们最求的目标！</p>
+       		<p>成绩面前，极美不会不思进取；困难面前，鲁泰也不会消沉退缩，我们的选择就是：永不止步，永远向前。</p>
+        </div>
+  </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="foot-box">
+    	<div class="foot-copyright">
+        	<img src="../images/index/foot_01.png" width="51" height="39">
+   	  	  	<p>极美服装制衣有限公司<span>Copyright © 2015.company name all rights reserved.<img src="../images/index/foot_02.gif" width="50" height="12"></span></p>
+        </div>
+        <div class="foot-other">
+        	<a href="">==&nbsp;后台管理&nbsp;==</a>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="goback">
+	<div class="follow">
+    	<span>关注我们</span>
+    	<p><img src="../images/index/go_06.png" width="36" height="37"></p> 
+    </div>
+  	<div class="custom">
+    	<a href="">在线客服</a>
+  	</div>
+  	<div class="query">
+    	<a href="">订单<br>查询</a>
+    </div>
+    <script type="text/javascript">
+		$(function(){
+			$(".gotop").click(function(){
+				$("html,body").animate({scrollTop:"0"},500);
+			});
+		})
+	</script>
+  	<div class="gotop">
+    </div>
+</div>
+</body>
+</html>
+
